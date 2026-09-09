@@ -60,21 +60,42 @@ pagecss: pages.css
           <p style="margin-bottom:var(--space-md);font-size:0.94rem;color:var(--anthracite-soft);">Öffnet Ihr E-Mail-Programm mit vorausgefüllter Nachricht an info@hausklar-oberfranken.de</p>
           <form id="kontaktForm">
             <div class="form-row">
-              <label for="kf-name">Name</label>
-              <input type="text" id="kf-name" name="name" required autocomplete="name" />
+              <label for="kf-name">Name *</label>
+              <input type="text" id="kf-name" name="name" required autocomplete="name" placeholder="Max Mustermann" />
             </div>
             <div class="form-row">
-              <label for="kf-email">E-Mail</label>
-              <input type="email" id="kf-email" name="email" required autocomplete="email" />
+              <label for="kf-email">E-Mail *</label>
+              <input type="email" id="kf-email" name="email" required autocomplete="email" placeholder="max@mustermann.de" />
             </div>
             <div class="form-row">
               <label for="kf-phone">Telefon (optional)</label>
-              <input type="tel" id="kf-phone" name="phone" autocomplete="tel" />
+              <input type="tel" id="kf-phone" name="phone" autocomplete="tel" placeholder="+49 176 12345678" />
             </div>
             <div class="form-row">
               <label for="kf-message">Nachricht</label>
               <textarea id="kf-message" name="message" placeholder="Ihr Anliegen …"></textarea>
             </div>
+            <div class="form-row">
+              <label for="kf-photos">Fotos (optional)</label>
+              <input type="file" id="kf-photos" name="photos" accept="image/*" multiple />
+              <p class="form-hint">Für eine noch genauere Einschätzung können Sie Fotos auswählen – bitte hängen Sie diese anschließend einfach in Ihrem geöffneten E-Mail-Programm an die Nachricht an.</p>
+            </div>
+
+            <p class="form-required-hint">* Pflichtfelder</p>
+
+            <label class="consent-check">
+              <input type="checkbox" name="consent" required />
+              <span>Ich bin damit einverstanden, dass diese Daten zur Kontaktaufnahme gespeichert werden. *</span>
+            </label>
+
+            <label class="robot-check">
+              <input type="checkbox" name="notRobot" required />
+              <span class="robot-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l7 3v6.2c0 4.8-3.2 8-7 9-3.8-1-7-4.2-7-9V6l7-3z" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="robot-check-label">Ich bin kein Roboter</span>
+            </label>
+
             <button type="submit" class="btn btn-primary btn-block">Nachricht per E-Mail senden</button>
           </form>
         </div>
@@ -88,17 +109,22 @@ pagecss: pages.css
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
+        var photosInput = document.getElementById("kf-photos");
+        var photoCount = photosInput && photosInput.files ? photosInput.files.length : 0;
         var subject = "Kontaktanfrage über die Website";
-        var body = [
+        var bodyLines = [
           "Name: " + form.name.value.trim(),
           "E-Mail: " + form.email.value.trim(),
           "Telefon: " + (form.phone.value.trim() || "-"),
           "",
           "Nachricht:",
           form.message.value.trim() || "-",
-        ].join("\n");
+        ];
+        if (photoCount > 0) {
+          bodyLines.push("", "Hinweis: " + photoCount + " Foto(s) ausgewählt – bitte in dieser E-Mail manuell anhängen.");
+        }
         window.location.href =
-          "mailto:info@hausklar-oberfranken.de?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+          "mailto:info@hausklar-oberfranken.de?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyLines.join("\n"));
       });
     })();
   </script>
