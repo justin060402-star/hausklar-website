@@ -793,6 +793,24 @@ p {
   transform: translateY(-6px);
   box-shadow: var(--shadow-soft);
 }
+
+.google-reviews-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-xl);
+  text-align: center;
+  max-width: 560px;
+  margin: var(--space-xl) auto 0;
+}
+.google-reviews-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto var(--space-md);
+}
+.google-reviews-card p {
+  margin-bottom: var(--space-md);
+}
 .icon-badge {
   width: 52px;
   height: 52px;

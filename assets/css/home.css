@@ -270,31 +270,6 @@
 }
 
 /* --- Bewertungen --- */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
-  margin-top: var(--space-xl);
-}
-.review-card .stars {
-  color: var(--forest);
-  letter-spacing: 0.15em;
-  margin-bottom: var(--space-sm);
-}
-.review-card p {
-  font-size: 0.98rem;
-}
-.review-card .review-author {
-  margin-top: var(--space-md);
-  font-weight: 600;
-  color: var(--anthracite);
-  font-size: 0.9rem;
-}
-@media (max-width: 900px) {
-  .reviews-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* --- Kontakt-Teaser --- */
 .contact-slide {
