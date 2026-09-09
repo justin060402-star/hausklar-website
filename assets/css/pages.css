@@ -402,21 +402,39 @@ section.alt {
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.leistungen-list-simple {
-  columns: 2;
-  gap: var(--space-lg);
-  margin-top: var(--space-md);
+.leistung-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem 0.7rem;
+  max-width: 920px;
+  margin: var(--space-lg) auto 0;
 }
-.leistungen-list-simple li {
-  break-inside: avoid;
-  padding: 0.4rem 0;
+.leistung-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 0.6rem 1.15rem;
+  font-size: 0.9rem;
   color: var(--anthracite-soft);
-  border-bottom: 1px dashed var(--line);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.35s var(--ease-soft), box-shadow 0.35s var(--ease-soft), border-color 0.35s ease;
 }
-@media (max-width: 600px) {
-  .leistungen-list-simple {
-    columns: 1;
-  }
+.leistung-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--forest);
+  flex-shrink: 0;
+}
+.leistung-tag:hover {
+  transform: translateY(-2px);
+  border-color: var(--forest);
+  box-shadow: var(--shadow-soft);
 }
 
 /* Anker-Tabs für Sammel-Leistungsseiten (Spezialleistungen / Gewerbe) */
