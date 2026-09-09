@@ -808,6 +808,21 @@ p {
   height: 44px;
   margin: 0 auto var(--space-md);
 }
+.google-reviews-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--anthracite);
+  margin-bottom: var(--space-sm);
+}
+.google-reviews-stars {
+  color: #f5b400;
+  letter-spacing: 0.1em;
+  font-size: 1.2rem;
+}
 .google-reviews-card p {
   margin-bottom: var(--space-md);
 }
