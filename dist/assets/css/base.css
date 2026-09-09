@@ -641,6 +641,81 @@ p {
   margin-top: 0.6rem;
   text-align: center;
 }
+.form-hint {
+  font-size: 0.78rem;
+  color: var(--anthracite-soft);
+  margin-top: 0.45rem;
+}
+.form-row input[type="file"] {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.form-required-hint {
+  font-size: 0.76rem;
+  color: var(--anthracite-soft);
+  margin: 0.2rem 0 var(--space-sm);
+}
+
+.consent-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: var(--space-sm);
+  cursor: pointer;
+}
+.consent-check input {
+  margin-top: 0.2rem;
+  accent-color: var(--forest);
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+.consent-check span {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--anthracite-soft);
+}
+
+.robot-check {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--cream);
+  padding: 0.75rem 1rem;
+  margin-bottom: var(--space-md);
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.robot-check:has(input:checked) {
+  border-color: var(--forest);
+  background: var(--white);
+}
+.robot-check input {
+  accent-color: var(--forest);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.robot-check-icon {
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  opacity: 0.55;
+}
+.robot-check-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--forest);
+}
+.robot-check-label {
+  font-size: 0.87rem;
+  color: var(--anthracite);
+  font-weight: 500;
+}
 
 /* ===== Bild-Platzhalter ===== */
 .img-placeholder {

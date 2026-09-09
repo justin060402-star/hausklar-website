@@ -85,6 +85,9 @@
 
     if (!name || !email) return;
 
+    var photosInput = document.getElementById("af-photos");
+    var photoCount = photosInput && photosInput.files ? photosInput.files.length : 0;
+
     var subject = "Anfrage: " + (services.length ? services.join(", ") : "Allgemeine Anfrage");
     var bodyLines = [
       "Name: " + name,
@@ -95,6 +98,9 @@
       "Nachricht:",
       message || "-",
     ];
+    if (photoCount > 0) {
+      bodyLines.push("", "Hinweis: " + photoCount + " Foto(s) ausgewählt – bitte in dieser E-Mail manuell anhängen.");
+    }
     var mailto =
       "mailto:info@hausklar-oberfranken.de?subject=" +
       encodeURIComponent(subject) +
