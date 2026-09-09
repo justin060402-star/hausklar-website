@@ -13,7 +13,8 @@
 
 /* --- Hero --- */
 .hero {
-  padding: 0;
+  padding-top: calc(var(--header-h) + var(--space-md));
+  box-sizing: border-box;
   min-height: 100vh;
   color: var(--white);
   overflow: hidden;
