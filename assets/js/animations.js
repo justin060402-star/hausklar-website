@@ -3,14 +3,34 @@
 
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (typeof gsap === "undefined") return;
-  if (typeof ScrollTrigger !== "undefined") gsap.registerPlugin(ScrollTrigger);
-
-  if (prefersReduced) {
+  function showAllReveals() {
     document.querySelectorAll(".reveal, .reveal-scale").forEach(function (el) {
       el.style.opacity = 1;
       el.style.transform = "none";
     });
+  }
+
+  // Sicherheitsnetz: Falls GSAP/ScrollTrigger nicht laden (CDN-Ausfall, Adblocker)
+  // oder ein Trigger aus irgendeinem Grund nicht ausloest, bleiben Inhalte sonst
+  // dauerhaft unsichtbar (opacity:0 ist der CSS-Grundzustand). Nach kurzer Zeit
+  // wird daher immer alles sichtbar gemacht, das noch nicht erschienen ist.
+  window.setTimeout(showAllReveals, 2500);
+
+  if (typeof gsap === "undefined") {
+    showAllReveals();
+    return;
+  }
+  if (typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+    // Trigger-Positionen neu berechnen, sobald alle Bilder geladen sind
+    // (verspätet nachladende Bilder koennen sonst Trigger-Punkte verschieben).
+    window.addEventListener("load", function () {
+      ScrollTrigger.refresh();
+    });
+  }
+
+  if (prefersReduced) {
+    showAllReveals();
   } else {
     // Fade/Blur-Reveal beim Scrollen
     document.querySelectorAll(".reveal").forEach(function (el, i) {
