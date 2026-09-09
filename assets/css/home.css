@@ -1,0 +1,327 @@
+/* ===== Startseite: Präsentations-Scroll ===== */
+.slide {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: calc(var(--header-h) + var(--space-lg)) 0 var(--space-2xl);
+}
+.slide-inner {
+  width: 100%;
+}
+
+/* --- Hero --- */
+.hero {
+  padding: 0;
+  min-height: 100vh;
+  color: var(--white);
+  overflow: hidden;
+}
+.hero .img-placeholder {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(31, 53, 39, 0.35) 0%, rgba(31, 53, 39, 0.72) 100%);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 var(--space-lg);
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.hero .eyebrow {
+  color: var(--sand-soft);
+}
+.hero .eyebrow::before {
+  background: var(--sand-soft);
+}
+.hero h1 {
+  font-size: var(--fs-hero);
+  color: var(--white);
+  margin: var(--space-sm) 0 var(--space-md);
+  max-width: 15ch;
+}
+.hero p.sub {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.15rem;
+  max-width: 46ch;
+  margin-bottom: var(--space-lg);
+}
+.hero-ctas {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.scroll-hint {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.scroll-hint .line {
+  width: 1px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+}
+.scroll-hint .line::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 40%;
+  background: var(--white);
+  animation: scrollDown 1.8s infinite;
+}
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(250%);
+  }
+}
+
+/* --- Zwei-Spalten Text/Bild --- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+.split.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+.split.reverse .split-media {
+  order: 2;
+}
+.split-text h2 {
+  margin: var(--space-sm) 0 var(--space-md);
+}
+.split-text p + p {
+  margin-top: var(--space-sm);
+}
+@media (max-width: 900px) {
+  .split,
+  .split.reverse {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .split.reverse .split-media {
+    order: 0;
+  }
+}
+
+/* --- Vertrauen / Stats --- */
+.stats-slide {
+  background: var(--forest-dark);
+  color: var(--white);
+}
+.stats-slide p {
+  color: rgba(255, 255, 255, 0.75);
+}
+.stats-slide .eyebrow {
+  color: var(--sage);
+}
+.stats-slide .eyebrow::before {
+  background: var(--sage);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+.stat-item {
+  text-align: center;
+}
+.stat-num {
+  font-size: clamp(2.4rem, 4.4vw, 3.6rem);
+  font-weight: 700;
+  color: var(--white);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.stat-label {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 800px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Leistungen Grid --- */
+.services-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+.service-card {
+  display: block;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.5s var(--ease-soft), box-shadow 0.5s var(--ease-soft);
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: var(--shadow-soft);
+}
+.service-card .img-placeholder {
+  border-radius: 0;
+  aspect-ratio: 4/3;
+  min-height: 0;
+}
+.service-card-body {
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+}
+.service-card-body h3 {
+  font-size: 1.08rem;
+  margin-bottom: 0.35rem;
+}
+.service-card-body span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--forest);
+}
+@media (max-width: 980px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Arbeitsweise / Warum wir Icon-Grid --- */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+@media (max-width: 980px) {
+  .icon-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .icon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Galerie Teaser --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+.gallery-grid a:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.gallery-grid .img-placeholder {
+  height: 100%;
+  border-radius: var(--radius-md);
+}
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery-grid a:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+/* --- Bewertungen --- */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+.review-card .stars {
+  color: var(--forest);
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-sm);
+}
+.review-card p {
+  font-size: 0.98rem;
+}
+.review-card .review-author {
+  margin-top: var(--space-md);
+  font-weight: 600;
+  color: var(--anthracite);
+  font-size: 0.9rem;
+}
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Kontakt-Teaser --- */
+.contact-slide {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--sand-soft) 100%);
+}
+.contact-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-xl);
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.contact-card h2 {
+  margin-bottom: var(--space-sm);
+}
+.contact-card p {
+  max-width: 48ch;
+  margin: 0 auto var(--space-lg);
+}
+.contact-card .hero-ctas {
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .slide {
+    padding: calc(var(--header-h-shrink) + var(--space-md)) 0 var(--space-xl);
+  }
+}

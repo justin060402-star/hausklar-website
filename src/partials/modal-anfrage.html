@@ -1,0 +1,53 @@
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="modal-box" id="modalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <button type="button" class="modal-close" id="modalClose" aria-label="Schließen">✕</button>
+  <h3 id="modalTitle">Jetzt Anfrage stellen</h3>
+  <p class="modal-sub" id="modalSub">Wählen Sie eine oder mehrere Leistungen aus – wir melden uns zeitnah mit einer unverbindlichen Einschätzung.</p>
+
+  <form id="anfrageForm">
+    <div class="form-row" id="serviceLockedRow" hidden>
+      <label>Ausgewählte Leistung</label>
+      <div class="service-locked" id="serviceLockedLabel"></div>
+    </div>
+
+    <div class="form-row" id="serviceGridRow">
+      <label>Leistung(en) auswählen</label>
+      <div class="service-grid">
+        <label class="service-check"><input type="checkbox" name="leistung" value="Terrassen- & Pflasterflächen" /> Terrassen & Pflaster</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Mauern & Treppen" /> Mauern & Treppen</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Dächer" /> Dächer</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Dachrinnen" /> Dachrinnen</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Fassaden" /> Fassaden</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Solar- & Photovoltaikanlagen" /> Solar & PV</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Terrassenüberdachungen" /> Terrassenüberdachungen</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Wintergärten" /> Wintergärten</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Fenster" /> Fenster</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Spezialleistungen" /> Spezialleistungen</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Garagentore & Carports" /> Garagentore & Carports</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Gewerbe- & Großobjekte" /> Gewerbe- & Großobjekte</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Graffiti Entfernung" /> Graffiti Entfernung</label>
+        <label class="service-check"><input type="checkbox" name="leistung" value="Ich bin mir noch nicht sicher" /> Noch nicht sicher</label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="af-name">Name</label>
+      <input type="text" id="af-name" name="name" required autocomplete="name" />
+    </div>
+    <div class="form-row">
+      <label for="af-email">E-Mail</label>
+      <input type="email" id="af-email" name="email" required autocomplete="email" />
+    </div>
+    <div class="form-row">
+      <label for="af-phone">Telefon (optional)</label>
+      <input type="tel" id="af-phone" name="phone" autocomplete="tel" />
+    </div>
+    <div class="form-row">
+      <label for="af-message">Nachricht</label>
+      <textarea id="af-message" name="message" placeholder="Beschreiben Sie kurz Ihr Anliegen, Objektgröße, gewünschten Zeitraum …"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Anfrage per E-Mail senden</button>
+    <p class="form-note">Öffnet Ihr E-Mail-Programm mit vorausgefüllter Nachricht an info@hausklar-oberfranken.de</p>
+  </form>
+</div>
