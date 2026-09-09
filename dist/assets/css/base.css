@@ -164,45 +164,58 @@ p {
   align-items: center;
   flex-shrink: 0;
 }
-.logo-link svg {
-  height: 42px;
+.logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logo-icon-img {
+  height: 40px;
   width: auto;
   transition: height 0.4s var(--ease-soft);
 }
-.site-header.is-scrolled .logo-link svg {
-  height: 34px;
+.logo-word-img {
+  height: 19px;
+  width: auto;
+  transition: height 0.4s var(--ease-soft);
 }
-.logo-link .logo-compact {
+.site-header.is-scrolled .logo-icon-img {
+  height: 32px;
+}
+.site-header.is-scrolled .logo-word-img {
+  height: 15px;
+}
+.logo-compact-img {
   display: none;
+  height: 34px;
+  width: auto;
 }
-.logo-link svg .lg-roof,
-.logo-link svg .lg-frame {
-  stroke: var(--forest);
+.site-header.is-scrolled .logo-compact-img {
+  height: 28px;
 }
-.logo-link svg .lg-word1 {
-  fill: var(--anthracite);
+@media (max-width: 560px) {
+  .logo-lockup {
+    display: none;
+  }
+  .logo-compact-img {
+    display: block;
+  }
 }
-.logo-link svg .lg-word2 {
-  fill: var(--forest);
+
+/* Footer: exakte Logofarben brauchen einen hellen Untergrund auf dem dunkelgrünen Footer */
+.footer-logo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--cream);
+  padding: 0.65rem 1.1rem;
+  border-radius: 100px;
 }
-.logo-link svg .lg-tag {
-  fill: var(--anthracite-soft);
+.footer-logo-chip .logo-icon-img {
+  height: 30px;
 }
-.site-footer .logo-link svg .lg-roof,
-.site-footer .logo-link svg .lg-frame {
-  stroke: var(--sage);
-}
-.site-footer .logo-link svg .lg-word1 {
-  fill: var(--white);
-}
-.site-footer .logo-link svg .lg-word2 {
-  fill: var(--sage);
-}
-.site-footer .logo-link svg .lg-tag {
-  fill: rgba(255, 255, 255, 0.6);
-}
-.site-footer .logo-link svg {
-  height: 44px;
+.footer-logo-chip .logo-word-img {
+  height: 15px;
 }
 
 .main-nav {
