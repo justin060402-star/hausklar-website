@@ -241,79 +241,20 @@ section.alt {
   }
 }
 
-/* --- Referenzen: Vorher/Nachher-Slider --- */
-.ba-slider {
+/* --- Referenzen: Vorher/Nachher-Fotos --- */
+.ba-photo {
   position: relative;
   aspect-ratio: 16/9;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  user-select: none;
   margin-top: var(--space-lg);
 }
-.ba-slider .img-placeholder {
+.ba-photo .img-placeholder {
   position: absolute;
   inset: 0;
   border-radius: 0;
   min-height: 0;
-}
-.ba-after {
-  position: absolute;
-  inset: 0;
-  width: 50%;
-  overflow: hidden;
-  z-index: 2;
-}
-.ba-after .img-placeholder {
-  width: 200%;
-  max-width: none;
-}
-.ba-handle {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 3px;
-  background: var(--white);
-  z-index: 3;
-  cursor: ew-resize;
-  transform: translateX(-50%);
-}
-.ba-handle::after {
-  content: "⇔";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: var(--white);
-  color: var(--forest);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  box-shadow: var(--shadow-card);
-}
-.ba-tag {
-  position: absolute;
-  top: var(--space-sm);
-  z-index: 4;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: rgba(43, 46, 44, 0.6);
-  color: var(--white);
-  padding: 0.35rem 0.7rem;
-  border-radius: 100px;
-}
-.ba-tag--before {
-  left: var(--space-sm);
-}
-.ba-tag--after {
-  right: var(--space-sm);
 }
 .ba-caption {
   margin-top: var(--space-sm);

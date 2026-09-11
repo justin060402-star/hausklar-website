@@ -111,33 +111,4 @@
       },
     });
   });
-
-  // Vorher/Nachher-Slider (Referenzen)
-  document.querySelectorAll(".ba-slider").forEach(function (slider) {
-    var after = slider.querySelector(".ba-after");
-    var handle = slider.querySelector(".ba-handle");
-    if (!after || !handle) return;
-    var dragging = false;
-
-    function setPos(clientX) {
-      var rect = slider.getBoundingClientRect();
-      var pct = Math.min(100, Math.max(0, ((clientX - rect.left) / rect.width) * 100));
-      after.style.width = pct + "%";
-      handle.style.left = pct + "%";
-    }
-
-    handle.addEventListener("pointerdown", function (e) {
-      dragging = true;
-      handle.setPointerCapture(e.pointerId);
-    });
-    window.addEventListener("pointerup", function () {
-      dragging = false;
-    });
-    slider.addEventListener("pointermove", function (e) {
-      if (dragging) setPos(e.clientX);
-    });
-    slider.addEventListener("click", function (e) {
-      setPos(e.clientX);
-    });
-  });
 })();
