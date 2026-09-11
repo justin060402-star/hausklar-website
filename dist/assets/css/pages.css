@@ -146,7 +146,7 @@ section.alt {
   margin-bottom: 0;
   flex-shrink: 0;
 }
-.protect-box .tag {
+.tag {
   display: inline-block;
   font-size: 0.72rem;
   font-weight: 700;
