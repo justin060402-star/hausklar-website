@@ -42,6 +42,34 @@
     });
   });
 
+  // Mega-Menü robust offen halten: da es weit vom Trigger entfernt gerendert
+  // wird (zentriert unter der ganzen Kopfzeile), verliert reines CSS-:hover
+  // den Hover-Zustand, sobald die Maus beim Runterbewegen kurz ueber
+  // "totem" Bereich zwischen Trigger und Menue faehrt - das Menue schliesst
+  // dann sofort (pointer-events:none), bevor ein Klick auf einen Unterpunkt
+  // ankommt. Mit einer kurzen Schliess-Verzoegerung bleibt genug Zeit, die
+  // Maus zum Menue zu bewegen, auch wenn dazwischen kein Hover-Ziel liegt.
+  document.querySelectorAll(".has-mega").forEach(function (item) {
+    var closeTimer = null;
+    function openMega() {
+      clearTimeout(closeTimer);
+      item.classList.add("is-open");
+    }
+    function scheduleCloseMega() {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () {
+        item.classList.remove("is-open");
+      }, 350);
+    }
+    item.addEventListener("mouseenter", openMega);
+    item.addEventListener("mouseleave", scheduleCloseMega);
+    var menu = item.querySelector(".mega-menu");
+    if (menu) {
+      menu.addEventListener("mouseenter", openMega);
+      menu.addEventListener("mouseleave", scheduleCloseMega);
+    }
+  });
+
   // Aktive Seite markieren
   var path = window.location.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
   document.querySelectorAll("a[href]").forEach(function (a) {
