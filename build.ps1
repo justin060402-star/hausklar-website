@@ -26,6 +26,7 @@ $headTpl = Get-Content (Join-Path $partialsDir "head.html") -Raw -Encoding UTF8
 $headerTpl = Get-Content (Join-Path $partialsDir "header.html") -Raw -Encoding UTF8
 $footerTpl = Get-Content (Join-Path $partialsDir "footer.html") -Raw -Encoding UTF8
 $modalTpl = Get-Content (Join-Path $partialsDir "modal-anfrage.html") -Raw -Encoding UTF8
+$cookieBannerTpl = Get-Content (Join-Path $partialsDir "cookie-banner.html") -Raw -Encoding UTF8
 
 $scriptsTpl = @"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -35,6 +36,7 @@ $scriptsTpl = @"
 <script src="{{PREFIX}}assets/js/animations.js"></script>
 <script src="{{PREFIX}}assets/js/nav.js"></script>
 <script src="{{PREFIX}}assets/js/modal.js"></script>
+<script src="{{PREFIX}}assets/js/cookie-consent.js"></script>
 "@
 
 # --- 3) Seiten einlesen & bauen ---
@@ -77,6 +79,7 @@ foreach ($file in $pageFiles) {
   $header = $headerTpl.Replace("{{PREFIX}}", $prefix)
   $footer = $footerTpl.Replace("{{PREFIX}}", $prefix)
   $modal = $modalTpl
+  $cookieBanner = $cookieBannerTpl.Replace("{{PREFIX}}", $prefix)
   $scripts = $scriptsTpl.Replace("{{PREFIX}}", $prefix)
   $bodyFinal = $body.Replace("{{PREFIX}}", $prefix)
 
@@ -91,6 +94,7 @@ $header
 $bodyFinal
 $footer
 $modal
+$cookieBanner
 $scripts
 </body>
 </html>
