@@ -15,21 +15,21 @@
 .hero {
   padding-top: calc(var(--header-h) + var(--space-md));
   box-sizing: border-box;
-  min-height: 100vh;
-  color: var(--white);
+  aspect-ratio: 16/9;
+  min-height: 560px;
+  max-height: 100vh;
+  color: var(--anthracite);
   overflow: hidden;
 }
 .hero .img-placeholder {
   position: absolute;
   inset: 0;
   border-radius: 0;
+  background: var(--white);
 }
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(31, 53, 39, 0.35) 0%, rgba(31, 53, 39, 0.72) 100%);
-  z-index: 1;
+.hero-photo-fade {
+  -webkit-mask-image: linear-gradient(100deg, transparent 0%, transparent 48%, black 68%, black 100%);
+  mask-image: linear-gradient(100deg, transparent 0%, transparent 48%, black 68%, black 100%);
 }
 .hero-content {
   position: relative;
@@ -40,19 +40,19 @@
   margin: 0 auto;
 }
 .hero .eyebrow {
-  color: var(--sand-soft);
+  color: var(--forest);
 }
 .hero .eyebrow::before {
-  background: var(--sand-soft);
+  background: var(--forest);
 }
 .hero h1 {
   font-size: var(--fs-hero);
-  color: var(--white);
+  color: var(--anthracite);
   margin: var(--space-sm) 0 var(--space-md);
   max-width: 15ch;
 }
 .hero p.sub {
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--anthracite-soft);
   font-size: 1.15rem;
   max-width: 46ch;
   margin-bottom: var(--space-lg);
@@ -72,15 +72,16 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--white);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
 }
 .scroll-hint .line {
   width: 1px;
   height: 34px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.75);
   overflow: hidden;
 }
 .scroll-hint .line::after {
