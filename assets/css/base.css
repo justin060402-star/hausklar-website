@@ -210,14 +210,6 @@ p {
   height: 34px;
   width: auto;
 }
-@media (max-width: 560px) {
-  .logo-lockup {
-    display: none;
-  }
-  .logo-compact-img {
-    display: block;
-  }
-}
 
 /* Footer: exakte Logofarben brauchen einen hellen Untergrund auf dem dunkelgrünen Footer */
 .footer-logo-chip {
@@ -471,25 +463,36 @@ p {
 }
 
 @media (max-width: 560px) {
-  .logo-link .logo-full {
-    display: none;
+  .logo-lockup {
+    gap: 0.4rem;
   }
-  .logo-link .logo-compact {
-    display: block;
-    height: 32px;
-  }
-  .site-header.is-scrolled .logo-link .logo-compact {
+  .logo-icon-img {
     height: 28px;
   }
+  .logo-text-stack {
+    gap: 1px;
+  }
+  .logo-word-img {
+    height: 15px;
+  }
+  .logo-tagline {
+    font-size: 0.42rem;
+    gap: 0.2rem;
+    letter-spacing: 0.06em;
+  }
+  .logo-tagline::before,
+  .logo-tagline::after {
+    width: 4px;
+  }
   .header-cta {
-    gap: 0.4rem;
+    gap: 0.25rem;
   }
   .header-cta .btn-secondary {
     display: none;
   }
   .header-cta .btn-primary {
-    padding: 0.6rem 0.9rem;
-    font-size: 0.82rem;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.7rem;
   }
 }
 
