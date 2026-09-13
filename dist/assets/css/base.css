@@ -898,6 +898,11 @@ p {
     padding: var(--space-lg) var(--space-md);
     margin-top: var(--space-lg);
   }
+  .google-reviews-card .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
 }
 .google-reviews-icon {
   width: 44px;
