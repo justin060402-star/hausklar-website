@@ -205,19 +205,10 @@ p {
   background: var(--anthracite-soft);
   flex-shrink: 0;
 }
-.site-header.is-scrolled .logo-icon-img {
-  height: 32px;
-}
-.site-header.is-scrolled .logo-word-img {
-  height: 15px;
-}
 .logo-compact-img {
   display: none;
   height: 34px;
   width: auto;
-}
-.site-header.is-scrolled .logo-compact-img {
-  height: 28px;
 }
 @media (max-width: 560px) {
   .logo-lockup {
