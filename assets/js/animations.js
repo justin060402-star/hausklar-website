@@ -10,12 +10,10 @@
     });
   }
 
-  // Sicherheitsnetz: Falls GSAP/ScrollTrigger nicht laden (CDN-Ausfall, Adblocker)
-  // oder ein Trigger aus irgendeinem Grund nicht ausloest, bleiben Inhalte sonst
-  // dauerhaft unsichtbar (opacity:0 ist der CSS-Grundzustand). Nach kurzer Zeit
-  // wird daher immer alles sichtbar gemacht, das noch nicht erschienen ist.
-  window.setTimeout(showAllReveals, 2500);
-
+  // Sicherheitsnetz nur fuer den Fall, dass GSAP/ScrollTrigger gar nicht laden
+  // (CDN-Ausfall, Adblocker) - sonst bliebe alles dauerhaft unsichtbar, da
+  // opacity:0 der CSS-Grundzustand ist. Kein pauschaler Timeout mehr, der
+  // sonst jedes noch nicht gescrollte Element ungefragt sichtbar schalten wuerde.
   if (typeof gsap === "undefined") {
     showAllReveals();
     return;
@@ -32,33 +30,35 @@
   if (prefersReduced) {
     showAllReveals();
   } else {
-    // Fade/Blur-Reveal beim Scrollen
+    // Fade-Reveal beim Scrollen (dezenter Weg, sanftes Abbremsen)
     document.querySelectorAll(".reveal").forEach(function (el, i) {
       gsap.to(el, {
         opacity: 1,
         y: 0,
-        duration: 1,
-        ease: "power3.out",
-        delay: (i % 3) * 0.08,
+        duration: 1.3,
+        ease: "power2.out",
+        delay: (i % 3) * 0.06,
+        overwrite: "auto",
         scrollTrigger: {
           trigger: el,
-          start: "top 88%",
+          start: "top 92%",
           toggleActions: "play none none none",
         },
       });
     });
 
-    // Scale-Reveal (Karten, Bilder)
+    // Scale-Reveal (Karten, Bilder) - sehr dezenter Zoom statt auffaelligem Pop
     document.querySelectorAll(".reveal-scale").forEach(function (el, i) {
       gsap.to(el, {
         opacity: 1,
         scale: 1,
-        duration: 1.1,
-        ease: "power3.out",
-        delay: (i % 3) * 0.07,
+        duration: 1.4,
+        ease: "power2.out",
+        delay: (i % 3) * 0.06,
+        overwrite: "auto",
         scrollTrigger: {
           trigger: el,
-          start: "top 90%",
+          start: "top 92%",
           toggleActions: "play none none none",
         },
       });

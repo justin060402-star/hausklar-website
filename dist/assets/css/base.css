@@ -933,9 +933,11 @@ p {
 /* ===== Reveal-Animation Basiszustand ===== */
 .reveal {
   opacity: 0;
-  transform: translateY(36px);
+  transform: translateY(18px);
+  will-change: opacity, transform;
 }
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.94);
+  transform: scale(0.97);
+  will-change: opacity, transform;
 }
