@@ -151,8 +151,11 @@
 
 <div class="mobile-panel" id="mobilePanel" data-lenis-prevent>
   <a href="index.html">Startseite</a>
-  <a href="leistungen/index.html">Leistungen</a>
-  <div class="mobile-sub">
+  <button type="button" class="mobile-nav-toggle" id="mobileLeistungenToggle" aria-expanded="false">
+    Leistungen <span class="mobile-nav-toggle-arrow">▾</span>
+  </button>
+  <div class="mobile-sub" id="mobileLeistungenSub" hidden>
+    <a href="leistungen/index.html" class="mobile-sub-all">Alle Leistungen ansehen →</a>
     <a href="leistungen/terrassen-pflasterflaechen.html">Terrassen</a>
     <a href="leistungen/terrassen-pflasterflaechen.html">Höfe</a>
     <a href="leistungen/terrassen-pflasterflaechen.html">Pflasterflächen</a>

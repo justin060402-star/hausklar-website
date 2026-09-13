@@ -32,6 +32,17 @@
     });
   }
 
+  // Leistungen-Untermenue im Mobile-Panel als Akkordeon auf-/zuklappen
+  var mobileLeistungenToggle = document.getElementById("mobileLeistungenToggle");
+  var mobileLeistungenSub = document.getElementById("mobileLeistungenSub");
+  if (mobileLeistungenToggle && mobileLeistungenSub) {
+    mobileLeistungenToggle.addEventListener("click", function () {
+      var isOpen = mobileLeistungenSub.hidden === false;
+      mobileLeistungenSub.hidden = isOpen;
+      mobileLeistungenToggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+    });
+  }
+
   // Mega-Menü per Klick/Tap zusätzlich zu :hover (Tablets ohne Hover)
   document.querySelectorAll(".has-mega > .nav-link").forEach(function (link) {
     link.addEventListener("click", function (e) {
