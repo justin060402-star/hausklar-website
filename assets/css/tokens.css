@@ -15,9 +15,9 @@
 
   /* Typografie */
   --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --fs-hero: clamp(2.6rem, 6vw, 5.2rem);
-  --fs-h1: clamp(2.2rem, 4.4vw, 3.6rem);
-  --fs-h2: clamp(1.8rem, 3.2vw, 2.6rem);
+  --fs-hero: clamp(2.6rem, 5.5vw, 6.2rem);
+  --fs-h1: clamp(2.2rem, 4vw, 4.2rem);
+  --fs-h2: clamp(1.8rem, 2.8vw, 3rem);
   --fs-h3: clamp(1.3rem, 2vw, 1.6rem);
   --fs-body: clamp(1rem, 1.1vw, 1.125rem);
   --fs-small: 0.9rem;
@@ -42,4 +42,12 @@
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --header-h: 92px;
   --header-h-shrink: 68px;
+}
+
+/* Auf sehr breiten Bildschirmen darf der Inhalt deutlich mehr Platz einnehmen,
+   damit nicht links/rechts so viel Leerraum entsteht. Mobile/Tablet bleiben unveraendert. */
+@media (min-width: 1400px) {
+  :root {
+    --container: min(92vw, 1680px);
+  }
 }
