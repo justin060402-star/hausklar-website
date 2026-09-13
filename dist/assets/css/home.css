@@ -49,7 +49,7 @@
   font-size: var(--fs-hero);
   color: var(--anthracite);
   margin: var(--space-sm) 0 var(--space-md);
-  max-width: 24ch;
+  max-width: 30ch;
 }
 .hero p.sub {
   color: var(--anthracite-soft);
