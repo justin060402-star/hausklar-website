@@ -21,6 +21,7 @@
   --fs-h3: clamp(1.3rem, 2vw, 1.6rem);
   --fs-body: clamp(1rem, 1.1vw, 1.125rem);
   --fs-small: 0.9rem;
+  --fs-eyebrow: 0.78rem;
   --lh-tight: 1.08;
   --lh-normal: 1.65;
 
@@ -49,5 +50,14 @@
 @media (min-width: 1400px) {
   :root {
     --container: min(92vw, 1680px);
+  }
+}
+
+/* Ab Tablet/Desktop-Breite deutlich groessere Lesetexte (Fliesstext, Eyebrow-Labels).
+   Ueberschriften sind davon bewusst ausgenommen. Mobile bleibt unveraendert. */
+@media (min-width: 900px) {
+  :root {
+    --fs-body: clamp(1.1rem, 1.3vw, 1.2rem);
+    --fs-eyebrow: 0.92rem;
   }
 }
