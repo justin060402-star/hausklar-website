@@ -956,6 +956,75 @@ p {
   }
 }
 
+/* ===== Umbau-Hinweis (grosses Willkommens-Overlay) ===== */
+.construction-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background: rgba(31, 53, 39, 0.55);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-soft);
+}
+.construction-overlay.is-visible {
+  opacity: 1;
+}
+.construction-modal {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  max-width: 560px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.4s var(--ease-soft);
+}
+.construction-overlay.is-visible .construction-modal {
+  transform: translateY(0) scale(1);
+}
+.construction-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  margin-bottom: var(--space-md);
+}
+.construction-modal p {
+  color: var(--anthracite-soft);
+  margin-bottom: var(--space-sm);
+}
+.construction-modal p strong {
+  color: var(--anthracite);
+}
+.construction-ok {
+  margin-top: var(--space-md);
+}
+.construction-close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--sand-soft);
+  color: var(--anthracite);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+.construction-close:hover {
+  background: var(--sand);
+}
+
 /* ===== WhatsApp-Kontakt-Widget ===== */
 .whatsapp-widget {
   position: fixed;

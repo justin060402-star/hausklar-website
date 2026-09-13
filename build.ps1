@@ -29,6 +29,7 @@ $footerTpl = Get-Content (Join-Path $partialsDir "footer.html") -Raw -Encoding U
 $modalTpl = Get-Content (Join-Path $partialsDir "modal-anfrage.html") -Raw -Encoding UTF8
 $cookieBannerTpl = Get-Content (Join-Path $partialsDir "cookie-banner.html") -Raw -Encoding UTF8
 $whatsappWidgetTpl = Get-Content (Join-Path $partialsDir "whatsapp-widget.html") -Raw -Encoding UTF8
+$constructionNoticeTpl = Get-Content (Join-Path $partialsDir "construction-notice.html") -Raw -Encoding UTF8
 
 $scriptsTpl = @"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -40,6 +41,7 @@ $scriptsTpl = @"
 <script src="{{PREFIX}}assets/js/modal.js"></script>
 <script src="{{PREFIX}}assets/js/cookie-consent.js"></script>
 <script src="{{PREFIX}}assets/js/whatsapp-widget.js"></script>
+<script src="{{PREFIX}}assets/js/construction-notice.js"></script>
 "@
 
 # --- 3) Seiten einlesen & bauen ---
@@ -84,6 +86,7 @@ foreach ($file in $pageFiles) {
   $modal = $modalTpl
   $cookieBanner = $cookieBannerTpl.Replace("{{PREFIX}}", $prefix)
   $whatsappWidget = $whatsappWidgetTpl.Replace("{{PREFIX}}", $prefix)
+  $constructionNotice = $constructionNoticeTpl.Replace("{{PREFIX}}", $prefix)
   $scripts = $scriptsTpl.Replace("{{PREFIX}}", $prefix)
   $bodyFinal = $body.Replace("{{PREFIX}}", $prefix)
 
@@ -95,6 +98,7 @@ $head
 </head>
 <body class="$bodyClass">
 $header
+$constructionNotice
 $bodyFinal
 $footer
 $modal
