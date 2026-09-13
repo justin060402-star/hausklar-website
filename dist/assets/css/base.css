@@ -184,6 +184,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  margin-top: 4px;
 }
 .logo-tagline {
   display: inline-flex;
