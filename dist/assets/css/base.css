@@ -211,10 +211,6 @@ p {
 .site-header.is-scrolled .logo-word-img {
   height: 15px;
 }
-.site-header.is-scrolled .logo-tagline {
-  opacity: 0;
-  height: 0;
-}
 .logo-compact-img {
   display: none;
   height: 34px;
