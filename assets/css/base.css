@@ -180,11 +180,29 @@ p {
   width: auto;
   transition: height 0.4s var(--ease-soft);
 }
+.logo-text-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.logo-tagline {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--anthracite-soft);
+  white-space: nowrap;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
 .site-header.is-scrolled .logo-icon-img {
   height: 32px;
 }
 .site-header.is-scrolled .logo-word-img {
   height: 15px;
+}
+.site-header.is-scrolled .logo-tagline {
+  opacity: 0;
+  height: 0;
 }
 .logo-compact-img {
   display: none;
