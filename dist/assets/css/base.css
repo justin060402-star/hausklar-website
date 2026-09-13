@@ -930,6 +930,61 @@ p {
   }
 }
 
+/* ===== WhatsApp-Kontakt-Widget ===== */
+.whatsapp-widget {
+  position: fixed;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--forest-dark);
+  color: var(--white);
+  padding: 0.85rem 1.2rem;
+  border-radius: 100px;
+  box-shadow: var(--shadow-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+  max-width: calc(100vw - 2 * var(--space-md));
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease-soft), transform 0.5s var(--ease-soft), background 0.25s ease;
+}
+.whatsapp-widget.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.whatsapp-widget:hover {
+  background: var(--forest);
+}
+.whatsapp-widget-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whatsapp-widget-icon svg {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 560px) {
+  .whatsapp-widget {
+    right: var(--space-sm);
+    bottom: var(--space-sm);
+    font-size: 0.8rem;
+    padding: 0.75rem 1rem;
+    max-width: calc(100vw - 2 * var(--space-sm));
+  }
+  .whatsapp-widget-text {
+    white-space: normal;
+  }
+}
+
 /* ===== Reveal-Animation Basiszustand ===== */
 .reveal {
   opacity: 0;
