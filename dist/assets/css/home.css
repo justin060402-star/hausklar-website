@@ -35,6 +35,24 @@
   .hero-photo-fade {
     display: none;
   }
+  .hero {
+    aspect-ratio: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    padding-bottom: var(--space-xl);
+  }
+}
+/* Kurze Bildschirme (z. B. Smartphone im Querformat): Hero darf ebenfalls frei wachsen,
+   damit Ueberschrift, Text und Buttons nie abgeschnitten werden. */
+@media (max-height: 500px) {
+  .hero {
+    aspect-ratio: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    padding-bottom: var(--space-xl);
+  }
 }
 .hero-content {
   position: relative;

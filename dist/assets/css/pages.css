@@ -15,6 +15,9 @@ body.page {
   inset: 0;
   border-radius: 0;
 }
+.page-hero .img-placeholder__inner {
+  display: none;
+}
 .page-hero::after {
   content: "";
   position: absolute;
