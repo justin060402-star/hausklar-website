@@ -19,6 +19,7 @@ function Write-Utf8NoBom($path, $content) {
 if (Test-Path $dist) { Remove-Item -Recurse -Force $dist }
 New-Item -ItemType Directory -Force -Path $dist | Out-Null
 Copy-Item -Recurse (Join-Path $root "assets") (Join-Path $dist "assets")
+Copy-Item (Join-Path $root "src\static\*") $dist -Force
 
 # --- 2) Partials laden ---
 $partialsDir = Join-Path $root "src\partials"
