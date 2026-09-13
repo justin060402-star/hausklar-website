@@ -186,6 +186,9 @@ p {
   gap: 3px;
 }
 .logo-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.58rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -193,6 +196,14 @@ p {
   color: var(--anthracite-soft);
   white-space: nowrap;
   transition: opacity 0.3s ease, height 0.3s ease;
+}
+.logo-tagline::before,
+.logo-tagline::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background: var(--anthracite-soft);
+  flex-shrink: 0;
 }
 .site-header.is-scrolled .logo-icon-img {
   height: 32px;
