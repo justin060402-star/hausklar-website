@@ -202,9 +202,21 @@
 /* --- Arbeitsweise / Warum wir Icon-Grid --- */
 .icon-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
   margin-top: var(--space-xl);
+}
+.icon-grid .card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+}
+.icon-grid .card .icon-badge {
+  margin-bottom: 0;
+}
+.icon-grid .card h3 {
+  font-size: 1rem;
 }
 @media (max-width: 980px) {
   .icon-grid {
@@ -214,6 +226,7 @@
 @media (max-width: 560px) {
   .icon-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-sm);
   }
 }
 
