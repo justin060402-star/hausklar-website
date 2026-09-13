@@ -968,7 +968,14 @@ p {
   background: rgba(31, 53, 39, 0.55);
   backdrop-filter: blur(4px);
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.4s var(--ease-soft);
+}
+.construction-overlay[hidden] {
+  display: none;
+}
+.construction-overlay.is-visible {
+  pointer-events: auto;
 }
 .construction-overlay.is-visible {
   opacity: 1;
