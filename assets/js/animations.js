@@ -22,6 +22,13 @@
     gsap.registerPlugin(ScrollTrigger);
     // Trigger-Positionen neu berechnen, sobald alle Bilder geladen sind
     // (verspätet nachladende Bilder koennen sonst Trigger-Punkte verschieben).
+    // Zusaetzlich ein kurzer Zwischen-Refresh, damit auf langsamen Verbindungen
+    // nicht bis zum kompletten window-load-Event gewartet werden muss, bevor
+    // die Trigger-Punkte stimmen (sonst wirkt die Seite beim Scrollen so, als
+    // ob Inhalte zu spaet oder gar nicht auftauchen).
+    window.setTimeout(function () {
+      ScrollTrigger.refresh();
+    }, 1200);
     window.addEventListener("load", function () {
       ScrollTrigger.refresh();
     });
