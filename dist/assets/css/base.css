@@ -279,6 +279,30 @@ p {
 .header-cta .btn {
   padding: 0.85rem 1.5rem;
 }
+.header-call {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--forest);
+}
+.header-call svg {
+  width: 19px;
+  height: 19px;
+}
+.header-call:hover {
+  border-color: var(--forest);
+  background: var(--sand-soft);
+}
+@media (max-width: 560px) {
+  .header-call {
+    display: inline-flex;
+  }
+}
 
 /* Mega menu */
 .has-mega {
