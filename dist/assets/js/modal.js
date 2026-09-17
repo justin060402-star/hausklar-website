@@ -46,8 +46,14 @@
     overlay.classList.add("is-open");
     box.classList.add("is-open");
     document.body.style.overflow = "hidden";
+    box.scrollTop = 0;
     var firstField = document.getElementById("af-name");
-    if (firstField) setTimeout(function () { firstField.focus(); }, 250);
+    if (firstField) {
+      setTimeout(function () {
+        box.scrollTop = 0;
+        firstField.focus({ preventScroll: true });
+      }, 250);
+    }
   }
 
   function closeModal() {
