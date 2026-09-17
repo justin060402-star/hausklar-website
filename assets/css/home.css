@@ -21,6 +21,14 @@
     padding-bottom: var(--space-sm);
   }
 }
+.slide.kundenstimmen-slide {
+  padding-bottom: calc(var(--header-h) + var(--space-lg));
+}
+@media (max-width: 700px) {
+  .slide.kundenstimmen-slide {
+    padding-bottom: calc(var(--header-h-shrink) + var(--space-md));
+  }
+}
 
 /* --- Hero --- */
 .hero {
