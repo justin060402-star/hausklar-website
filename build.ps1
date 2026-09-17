@@ -42,6 +42,7 @@ $scriptsTpl = @"
 <script src="{{PREFIX}}assets/js/cookie-consent.js"></script>
 <script src="{{PREFIX}}assets/js/whatsapp-widget.js"></script>
 <script src="{{PREFIX}}assets/js/construction-notice.js"></script>
+<script src="{{PREFIX}}assets/js/scroll-top.js"></script>
 "@
 
 # --- 3) Seiten einlesen & bauen ---
