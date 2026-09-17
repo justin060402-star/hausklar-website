@@ -22,7 +22,7 @@
 
 <link rel="stylesheet" href="../assets/css/tokens.css" />
 <link rel="stylesheet" href="../assets/css/base.css" />
-<link rel="stylesheet" href="../assets/css/pages.css" />
+<link rel="stylesheet" href="../assets/css/home.css" />
 
 <script type="application/ld+json">
 {
@@ -67,7 +67,7 @@
 </script>
 
 </head>
-<body class="page">
+<body class="home">
 <header class="site-header" id="siteHeader">
   <div class="container">
     <a href="../index.html" class="logo-link" aria-label="HausKlar Startseite">
@@ -203,17 +203,23 @@
   </div>
 </div>
 
-<main>
-  <section class="page-hero">
-    <div class="img-placeholder"><img src="../assets/img/referenzen-hero-pflaster.jpg" alt="Gereinigte Pflasterfläche mit Beetkante" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" /></div>
-    <div class="container page-hero-content">
-      <div class="breadcrumb"><a href="../index.html">Start</a> / Itzgrund</div>
+<main class="slides">
+
+  <section class="slide hero">
+    <div class="img-placeholder img-placeholder--hero">
+      <img src="../assets/img/hero-pflasterflaeche.jpg" alt="Gereinigte Pflasterfläche mit Beetkante" class="hero-photo-fade" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;" />
+    </div>
+    <div class="hero-content">
       <h1>Stein-, Glas- &amp; Solarreinigung in Itzgrund</h1>
-      <p class="lead">Im Itzgrund und Umland sorgen wir für saubere Terrassen, Dächer, Fassaden und Solaranlagen – direkt vor Ihrer Haustür.</p>
+      <p class="sub">Im Itzgrund und Umland sorgen wir für saubere Terrassen, Dächer, Fassaden und Solaranlagen – direkt vor Ihrer Haustür.</p>
+      <div class="hero-ctas">
+        <button type="button" class="btn btn-primary js-open-anfrage">Jetzt Beratung anfragen</button>
+        <a href="../leistungen/index.html" class="btn btn-secondary">Leistungen entdecken</a>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section class="slide">
     <div class="container">
       <span class="eyebrow reveal">Ihr Reinigungsservice vor Ort</span>
       <h2 class="reveal">Zuverlässig im Einsatz in Itzgrund und Umgebung.</h2>
@@ -221,34 +227,70 @@
     </div>
   </section>
 
-  <section>
+  <section class="slide">
     <div class="container">
-      <span class="eyebrow reveal">Auch in der Umgebung</span>
-      <h2 class="reveal">Regelmäßig im Einsatz rund um Itzgrund.</h2>
-      <p class="reveal" style="max-width:70ch;margin-top:0.75rem;">Neben Itzgrund selbst sind wir regelmäßig auch in Untermerzbach, Lahm, Schottenstein, Großheirath und Seßlach im Einsatz.</p>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="container">
-      <div class="detail-text reveal" style="max-width:70ch;">
-        <span class="eyebrow">Warum HausKlar</span>
-        <h3>Chemiefrei, materialschonend, langfristig.</h3>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Chemiefreie Verfahren:</strong> Heißwassertechnik bis 150&nbsp;°C und Osmose-Reinwasser statt aggressiver Reinigungsmittel.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Meist ohne Gerüst:</strong> Dank Carbon-Teleskoptechnik erreichen wir die meisten Flächen sicher vom Boden aus.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Langfristiger Werterhalt:</strong> Auf Wunsch mit anschließender Imprägnierung für einen dauerhaften Schutzeffekt.</span></li>
-        </ul>
+      <div class="split">
+        <div class="split-media reveal-scale">
+          <div class="img-placeholder img-placeholder--wide" style="aspect-ratio:2576/1448;"><img src="../assets/img/naturstein-detailaufnahme.jpg" alt="Detailaufnahme einer gereinigten Natursteinfassade" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" /></div>
+        </div>
+        <div class="split-text">
+          <span class="eyebrow reveal">Unsere Philosophie</span>
+          <h2 class="reveal">Mehr als nur eine Reinigung – nachhaltiger Werterhalt für Ihre Immobilie.</h2>
+          <p class="reveal">Saubere Außenflächen stehen für Qualität, Sicherheit und einen bleibenden ersten Eindruck. Wir erhalten den Wert Ihrer Immobilie, schützen Materialien und schaffen Ergebnisse, die überzeugen und dauerhaft Bestand haben.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="slide">
     <div class="container">
-      <div class="section-head">
-        <h2>Unsere Leistungen in Itzgrund</h2>
+      <div class="split reverse">
+        <div class="split-media reveal-scale">
+          <div class="img-placeholder img-placeholder--wide" style="aspect-ratio:3227/4303;">
+            <img src="../assets/img/heisswasser-steinflaeche.jpg" alt="Gereinigte Pflasterfuge mit Moos" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          </div>
+        </div>
+        <div class="split-text">
+          <span class="eyebrow reveal">Spezialgebiet</span>
+          <h2 class="reveal">Heißwasserreinigung auf Profi-Niveau.</h2>
+          <p class="reveal">Bis zu 150 °C heißes Wasser entfernt selbst tief sitzende Verschmutzungen porentief – häufig ganz ohne chemische Reinigungsmittel. Das Verfahren eignet sich besonders für empfindliche Steinflächen, Terrassen, Einfahrten und stark verschmutzte Außenbereiche.</p>
+        </div>
       </div>
-      <div class="services-overview-grid">
+    </div>
+  </section>
+
+  <section class="slide stats-slide">
+    <div class="container">
+      <span class="eyebrow reveal">Auf einen Blick</span>
+      <h2 class="reveal">Für jede Fläche die passende Profi-Technik.</h2>
+      <p class="reveal" style="max-width:56ch;margin-top:0.75rem;">Wir nutzen keine Baumarktgeräte, sondern die richtige Technik für die richtige Aufgabe – Heißwasser-Hochdruck für Stein, Dach und Fassade, Osmose-Reinwasser für Glas- und Solarflächen.</p>
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-num" data-count="150"><span class="num">0</span>°C</div>
+          <div class="stat-label">Heißwasser-Technik für Stein, Dach &amp; Fassade</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-count="0"><span class="num">0</span> mg/l</div>
+          <div class="stat-label">Mineralgehalt im Osmose-Reinwasser für streifenfreie Glas- &amp; Solarflächen</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-count="100"><span class="num">0</span>%</div>
+          <div class="stat-label">Chemiefreie Reinigung als Standard – bei jedem Verfahren</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="leistungen-slide">
+    <div class="container">
+      <div class="services-head">
+        <div>
+          <span class="eyebrow reveal">Leistungen</span>
+          <h2 class="reveal">Jede Fläche in Itzgrund verdient die richtige Behandlung.</h2>
+        </div>
+        <a href="../leistungen/index.html" class="btn btn-secondary reveal">Alle Leistungen ansehen</a>
+      </div>
+      <div class="services-grid">
         <a class="service-card reveal-scale" href="../leistungen/terrassen-pflasterflaechen.html">
           <div class="img-placeholder"><img src="../assets/img/terrassen-pflaster-uebersicht.jpg" alt="Pflasterfläche Terrasse" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" /></div>
           <div class="service-card-body"><h3>Terrassen &amp; Pflasterflächen</h3><span>Mehr erfahren →</span></div>
@@ -297,13 +339,81 @@
     </div>
   </section>
 
-  <section class="alt">
-    <div class="container service-cta reveal-scale">
-      <h2>Interesse an einer professionellen Reinigung in Itzgrund?</h2>
-      <p>Fordern Sie eine unverbindliche Einschätzung an – wir melden uns zeitnah mit einem passenden Vorgehen für Ihr Objekt in Itzgrund.</p>
-      <button type="button" class="btn btn-primary js-open-anfrage">Jetzt Beratung anfragen</button>
+  <section class="slide">
+    <div class="container">
+      <div class="split reverse">
+        <div class="split-media reveal-scale">
+          <div class="img-placeholder img-placeholder--wide">
+            <div class="img-placeholder__inner">
+              <span class="img-placeholder__label">Platzhalterbild – Wassertropfen perlen von imprägnierter Fläche ab</span>
+            </div>
+          </div>
+        </div>
+        <div class="split-text">
+          <span class="eyebrow reveal">Profi-Imprägnierung</span>
+          <h2 class="reveal">Langfristiger Schutz statt kurzfristiger Sauberkeit.</h2>
+          <p class="reveal">Nach der Reinigung können Fassaden, Dächer und Steinflächen professionell imprägniert werden. Die hochwertige Schutzschicht reduziert das Eindringen von Wasser und Schmutz deutlich und erzeugt einen langanhaltenden Abperleffekt.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="slide" style="background:var(--sand-soft);">
+    <div class="container">
+      <span class="eyebrow reveal">Warum HausKlar?</span>
+      <h2 class="reveal">Qualität, die man sieht – und spürt.</h2>
+      <div class="icon-grid">
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14.5 6.5a4 4 0 01-5.4 5.4L4 17l3 3 5.1-5.1a4 4 0 005.4-5.4l-2 2-2.2-2.2 2-2z" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h3>Modernste Technik</h3></div>
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l7 3v6.2c0 4.8-3.2 8-7 9-3.8-1-7-4.2-7-9V6l7-3z" stroke-width="1.7" stroke-linejoin="round"/></svg></div><h3>Höchste Sorgfalt</h3></div>
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3c3.5 4.5 7 9 7 12.5A7 7 0 015 15.5C5 12 8.5 7.5 12 3z" stroke-width="1.7" stroke-linejoin="round"/></svg></div><h3>Chemiefreie Verfahren</h3></div>
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Langlebige Ergebnisse</h3></div>
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5h16v11H8l-4 4V5z" stroke-width="1.7" stroke-linejoin="round"/></svg></div><h3>Transparente Beratung</h3></div>
+        <div class="card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="8.5" stroke-width="1.7"/><path d="M12 7.5V12l3 2" stroke-width="1.7" stroke-linecap="round"/></svg></div><h3>Zuverlässige Terminplanung</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:var(--sand-soft);">
+    <div class="container">
+      <span class="eyebrow reveal">Kundenstimmen</span>
+      <h2 class="reveal">Vertrauen, das wächst.</h2>
+      <div class="google-reviews-card reveal-scale">
+        <div class="google-reviews-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.4-.1-2.7-.4-3.5z"/>
+            <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.5 15.1 18.9 12 24 12c3.1 0 5.8 1.1 8 3l6-6C34.6 5.1 29.6 3 24 3c-7.7 0-14.3 4.3-17.7 11.7z"/>
+            <path fill="#4CAF50" d="M24 45c5.5 0 10.4-1.9 14.3-5.1l-6.6-5.6C29.6 36.1 26.9 37 24 37c-5.2 0-9.6-3.3-11.3-8l-6.6 5.1C9.6 40.6 16.2 45 24 45z"/>
+            <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.3 5.7l6.6 5.6C39.9 37.3 44 31.5 44 24c0-1.4-.1-2.7-.4-3.5z"/>
+          </svg>
+        </div>
+        <p class="google-reviews-text">Kunden und Kundinnen bewerten uns mit <strong>5,0</strong> <span class="google-reviews-stars">★★★★★</span> auf Google.</p>
+        <a href="https://share.google/M3NdBDdDaP926nQw6" target="_blank" rel="noopener" class="btn btn-secondary">Bewertungen auf Google ansehen →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="container">
+      <span class="eyebrow reveal">Auch in der Umgebung</span>
+      <h2 class="reveal">Regelmäßig im Einsatz rund um Itzgrund.</h2>
+      <p class="reveal" style="max-width:70ch;margin-top:0.75rem;">Neben Itzgrund selbst sind wir regelmäßig auch in Untermerzbach, Lahm, Schottenstein, Großheirath und Seßlach im Einsatz.</p>
+    </div>
+  </section>
+
+  <section class="slide contact-slide">
+    <div class="container">
+      <div class="contact-card reveal-scale">
+        <span class="eyebrow" style="justify-content:center;">Kontakt</span>
+        <h2>Interesse an einer professionellen Reinigung in Itzgrund?</h2>
+        <p>Fordern Sie eine unverbindliche Einschätzung an – wir melden uns zeitnah mit einem passenden Vorgehen für Ihr Objekt in Itzgrund.</p>
+        <div class="hero-ctas">
+          <button type="button" class="btn btn-primary js-open-anfrage">Jetzt anfragen</button>
+          <a href="../kontakt.html" class="btn btn-secondary">Kontaktseite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
