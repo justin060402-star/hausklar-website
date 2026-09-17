@@ -10,6 +10,17 @@
 .slide-inner {
   width: 100%;
 }
+.slide.slide-compact {
+  min-height: 0;
+  padding-top: calc(var(--header-h) + var(--space-md));
+  padding-bottom: var(--space-md);
+}
+@media (max-width: 700px) {
+  .slide.slide-compact {
+    padding-top: calc(var(--header-h-shrink) + var(--space-sm));
+    padding-bottom: var(--space-sm);
+  }
+}
 
 /* --- Hero --- */
 .hero {
