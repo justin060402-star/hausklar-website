@@ -86,6 +86,51 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/kronach.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/lichtenfels.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/staffelstein.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/roedental.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/neustadt.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/bamberg.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/itzgrund.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/kulmbach.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/standorte/bayreuth.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.hausklar-oberfranken.de/impressum.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
