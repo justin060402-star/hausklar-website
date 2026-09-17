@@ -32,6 +32,13 @@ body.page {
   padding-top: calc(var(--header-h) + var(--space-lg));
   padding-bottom: var(--space-xl);
 }
+.page-hero .eyebrow {
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+.page-hero .eyebrow::before {
+  background: var(--white);
+}
 .breadcrumb {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.75);
