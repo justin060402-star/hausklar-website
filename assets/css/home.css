@@ -96,31 +96,50 @@
   flex-wrap: wrap;
 }
 @media (max-width: 700px) {
-  /* Mobil (Hochformat): Foto und Text sind getrennt statt Text ueber dem Foto.
-     Das Foto beginnt unterhalb der fixen Kopfzeile (dank padding-top von
-     .hero) und wird in echtem 16:9 angezeigt, komplett und unbeschnitten.
-     Der Text folgt darunter im normalen Fluss auf normalem Hintergrund. */
+  /* Mobil (Hochformat): Foto laeuft randlos ueber den gesamten Hero statt der
+     diagonalen Desktop-Ausblendmaske - kein weisser Hintergrund, kein weicher
+     Uebergang. Text sitzt direkt auf dem Foto, daher dunkler Verlauf fuer
+     Lesbarkeit und helle Textfarben. Muss nach den Basis-Hero-Regeln stehen,
+     sonst gewinnen die unconditional .hero-h1/.hero-p.sub-Regeln bei
+     gleicher Spezifitaet durch spaetere Reihenfolge im Stylesheet. */
   .hero-photo-fade {
     -webkit-mask-image: none;
     mask-image: none;
   }
   .hero {
     aspect-ratio: auto;
-    min-height: 0;
+    min-height: 640px;
     max-height: none;
-    overflow: visible;
-    display: block;
-    padding-bottom: var(--space-lg);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: var(--space-xl);
   }
-  .hero .img-placeholder {
-    position: relative;
-    inset: auto;
-    aspect-ratio: 16/9;
-    min-height: 0;
-    width: 100%;
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(31, 53, 39, 0.05) 0%, rgba(31, 53, 39, 0.6) 60%, rgba(31, 53, 39, 0.9) 100%);
+    z-index: 1;
   }
-  .hero-content {
-    padding-top: var(--space-lg);
+  .hero .eyebrow,
+  .hero h1,
+  .hero p.sub {
+    color: var(--white);
+  }
+  .hero .eyebrow::before {
+    background: var(--white);
+  }
+  .hero-ctas .btn-secondary {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(6px);
+  }
+  .hero-ctas .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: var(--white);
+    color: var(--white);
   }
 }
 .scroll-hint {
