@@ -35,7 +35,41 @@ Coburg, Lichtenfels, Kulmbach, Bayreuth, Bamberg, Ebern, Itzgrund, Rödental, Ne
 
 - Startseite: /
 - Leistungen-Übersicht: /leistungen/
-- Über uns: /ueber-uns.html
-- Ablauf: /ablauf.html
-- Referenzen: /referenzen.html
-- Kontakt: /kontakt.html
+- Über uns: /ueber-uns
+- Ablauf einer Anfrage: /ablauf
+- Referenzen (Vorher/Nachher): /referenzen
+- Kontakt: /kontakt
+
+## Leistungen im Detail
+
+- Terrassen- & Pflasterflächenreinigung (Naturstein, Beton, Klinker): /leistungen/terrassen-pflasterflaechen
+- Mauern & Treppen reinigen: /leistungen/mauern-treppen
+- Dachreinigung (Moos-, Flechten- & Algenentfernung): /leistungen/daecher
+- Dachrinnenreinigung: /leistungen/dachrinnen
+- Fassadenreinigung: /leistungen/fassaden
+- Fenster- & Glasflächenreinigung: /leistungen/fenster
+- Solar- & Photovoltaikanlagenreinigung: /leistungen/solar-photovoltaik
+- Terrassenüberdachungen & Wintergärten reinigen: /leistungen/terrassenueberdachungen-wintergaerten
+- Spezialleistungen (Zäune, Kellerschächte, Holz- & WPC-Flächen): /leistungen/spezialleistungen
+- Graffiti-Entfernung: /leistungen/graffiti-entfernung
+- Gewerbe- & Großobjektreinigung (Hausverwaltungen, Parkhäuser, Tiefgaragen): /leistungen/gewerbe-grossobjekte
+
+## Standorte im Detail
+
+- Bamberg: /standorte/bamberg
+- Bayreuth: /standorte/bayreuth
+- Itzgrund: /standorte/itzgrund
+- Kronach: /standorte/kronach
+- Kulmbach: /standorte/kulmbach
+- Lichtenfels: /standorte/lichtenfels
+- Neustadt bei Coburg: /standorte/neustadt
+- Rödental: /standorte/roedental
+- Staffelstein: /standorte/staffelstein
+
+## Häufige Fragen (Auszug)
+
+- Wie oft sollte eine Terrasse oder Einfahrt professionell gereinigt werden? Je nach Lage alle ein bis zwei Jahre; mit Profi-Imprägnierung lassen sich die Intervalle verlängern.
+- Wird mit Chemikalien gearbeitet? Nein, standardmäßig chemiefrei – Heißwasser-Dampfverfahren bis 150 °C oder reguliertes Kaltwasser.
+- Ist für Dach-, Fassaden-, Solar- oder Fensterreinigung ein Gerüst nötig? In den meisten Fällen nicht, dank Teleskoplanzen-Technik vom Boden aus.
+- Was kostet eine professionelle Außenflächenreinigung? Abhängig von Flächengröße, Material und Verschmutzungsgrad – nach unverbindlicher Einschätzung wird ein Angebot erstellt.
+- Vollständige FAQ mit allen Details: /kontakt
