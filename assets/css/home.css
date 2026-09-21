@@ -116,7 +116,7 @@
 @media (max-width: 700px) {
   .hero {
     aspect-ratio: auto;
-    min-height: 640px;
+    min-height: 725px;
     max-height: none;
     overflow: hidden;
     display: flex;
