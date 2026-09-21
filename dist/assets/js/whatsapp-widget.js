@@ -19,11 +19,10 @@
     return;
   }
 
-  var threshold = trigger.offsetTop;
   var ticking = false;
 
   function onScroll() {
-    if (window.scrollY >= threshold) {
+    if (trigger.getBoundingClientRect().top <= window.innerHeight * 0.6) {
       show();
     } else {
       hide();
