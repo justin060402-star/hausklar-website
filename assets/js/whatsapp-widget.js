@@ -5,6 +5,7 @@
   if (!widget) return;
 
   var hero = document.querySelector(".hero");
+  var trigger = document.querySelector(".kundenstimmen-slide") || hero;
 
   function show() {
     widget.classList.add("is-visible");
@@ -13,12 +14,12 @@
     widget.classList.remove("is-visible");
   }
 
-  if (!hero) {
+  if (!trigger) {
     window.setTimeout(show, 2500);
     return;
   }
 
-  var threshold = hero.offsetHeight;
+  var threshold = trigger.offsetTop;
   var ticking = false;
 
   function onScroll() {
