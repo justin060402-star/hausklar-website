@@ -62,7 +62,13 @@
       "closes": "14:00"
     }
   ],
-  "sameAs": ["https://share.google/M3NdBDdDaP926nQw6"]
+  "sameAs": ["https://share.google/M3NdBDdDaP926nQw6"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "4",
+    "bestRating": "5"
+  }
 }
 </script>
 
@@ -225,6 +231,7 @@
         <a href="#garagentore-carports">Garagentore &amp; Carports</a>
       </div>
 
+      <!-- TEMP: Bildspalte entfernt (kein echtes Foto vorhanden), nur Text. Zum Wiederherstellen dieses Kommentar-Original wieder einsetzen:
       <div class="detail-block subsection" id="zaeune">
         <div class="detail-media reveal-scale">
           <div class="img-placeholder"><div class="img-placeholder__inner"><span class="img-placeholder__label">Zaunanlage Vorher/Nachher</span></div></div>
@@ -235,7 +242,14 @@
           <p>Ob Doppelstabmatten, Holzzäune oder kunstvoll verzierte Metallzäune – wir befreien die oft filigranen Strukturen von Grünspan, Straßenstaub und Flechten. Druck und Sprühwinkel werden dabei exakt auf die Stabilität des Zauns angepasst.</p>
         </div>
       </div>
+      -->
+      <div class="detail-text subsection reveal" id="zaeune" style="max-width:70ch;">
+        <span class="eyebrow">Zaunanlagen</span>
+        <h3>Filigrane Strukturen schonend gereinigt</h3>
+        <p>Ob Doppelstabmatten, Holzzäune oder kunstvoll verzierte Metallzäune – wir befreien die oft filigranen Strukturen von Grünspan, Straßenstaub und Flechten. Druck und Sprühwinkel werden dabei exakt auf die Stabilität des Zauns angepasst.</p>
+      </div>
 
+      <!-- TEMP: Bildspalte entfernt (kein echtes Foto vorhanden), nur Text. Zum Wiederherstellen dieses Kommentar-Original wieder einsetzen:
       <div class="detail-block reverse subsection" id="kellerschaechte">
         <div class="detail-media reveal-scale">
           <div class="img-placeholder"><div class="img-placeholder__inner"><span class="img-placeholder__label">Kellerschacht Vorher/Nachher</span></div></div>
@@ -245,6 +259,12 @@
           <h3>Mehr Licht, kein stehendes Wasser</h3>
           <p>Licht- und Kellerschächte sammeln über das Jahr Laub, Spinnweben, Schlamm und Ungeziefer. Wir entnehmen die Gitterroste, säubern diese gründlich und befreien den Schachtboden sowie die Entwässerungssiebe von jeglichen Ablagerungen. Das sorgt für spürbar mehr Licht im Keller und verhindert stehendes Wasser vor den Kellerfenstern.</p>
         </div>
+      </div>
+      -->
+      <div class="detail-text subsection reveal" id="kellerschaechte" style="max-width:70ch;">
+        <span class="eyebrow">Kellerschächte</span>
+        <h3>Mehr Licht, kein stehendes Wasser</h3>
+        <p>Licht- und Kellerschächte sammeln über das Jahr Laub, Spinnweben, Schlamm und Ungeziefer. Wir entnehmen die Gitterroste, säubern diese gründlich und befreien den Schachtboden sowie die Entwässerungssiebe von jeglichen Ablagerungen. Das sorgt für spürbar mehr Licht im Keller und verhindert stehendes Wasser vor den Kellerfenstern.</p>
       </div>
 
       <div class="detail-block subsection" id="holz-wpc">
@@ -284,6 +304,53 @@
       <button type="button" class="btn btn-primary js-open-anfrage" data-services="Spezialleistungen">Jetzt Spezialleistungen anfragen</button>
     </div>
   </section>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Spezialreinigung (Zäune, Kellerschächte, Holz & WPC)",
+    "name": "Spezialreinigung (Zäune, Kellerschächte, Holz & WPC) | HausKlar Oberfranken",
+    "description": "Feinfühlige Spezialreinigung für Zaunanlagen, Kellerschächte sowie Holz- und WPC-Terrassendielen – exakt auf Material und Stabilität abgestimmt.",
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "HausKlar – Außenflächenservice",
+      "telephone": "+49 176 41594016",
+      "url": "https://www.hausklar-oberfranken.de/"
+    },
+    "areaServed": [
+      "Coburg", "Lichtenfels", "Kulmbach", "Bayreuth", "Bamberg", "Ebern",
+      "Itzgrund", "Rödental", "Neustadt bei Coburg", "Seßlach", "Untersiemau", "Kronach",
+      "Burgkunstadt", "Staffelstein", "Oberfranken", "Mittelfranken"
+    ],
+    "url": "https://www.hausklar-oberfranken.de/leistungen/spezialleistungen"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Start",
+        "item": "https://www.hausklar-oberfranken.de/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Leistungen",
+        "item": "https://www.hausklar-oberfranken.de/leistungen/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Spezialleistungen",
+        "item": "https://www.hausklar-oberfranken.de/leistungen/spezialleistungen"
+      }
+    ]
+  }
+  </script>
 </main>
 
 <footer class="site-footer">
