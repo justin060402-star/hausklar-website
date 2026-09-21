@@ -39,6 +39,7 @@
    Lesbarkeit und helle Textfarben - einheitlich auf Desktop und Mobil. */
 .hero {
   padding-top: calc(var(--header-h) + var(--space-md));
+  padding-bottom: 0;
   box-sizing: border-box;
   aspect-ratio: 16/9;
   min-height: 560px;
