@@ -34,13 +34,16 @@
 }
 
 /* --- Hero --- */
+/* Foto laeuft randlos ueber den gesamten Hero (kein weisser Hintergrund, keine
+   Ausblendmaske). Text liegt direkt auf dem Foto, daher dunkler Verlauf fuer
+   Lesbarkeit und helle Textfarben - einheitlich auf Desktop und Mobil. */
 .hero {
   padding-top: calc(var(--header-h) + var(--space-md));
   box-sizing: border-box;
   aspect-ratio: 16/9;
   min-height: 560px;
   max-height: 100vh;
-  color: var(--anthracite);
+  color: var(--white);
   overflow: hidden;
 }
 .hero .img-placeholder {
@@ -49,9 +52,12 @@
   border-radius: 0;
   background: var(--white);
 }
-.hero-photo-fade {
-  -webkit-mask-image: linear-gradient(100deg, transparent 0%, transparent 48%, black 68%, black 100%);
-  mask-image: linear-gradient(100deg, transparent 0%, transparent 48%, black 68%, black 100%);
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 21, 18, 0.6) 0%, rgba(15, 21, 18, 0.78) 50%, rgba(15, 21, 18, 0.95) 100%);
+  z-index: 1;
 }
 /* Kurze Bildschirme (z. B. Smartphone im Querformat): Hero darf ebenfalls frei wachsen,
    damit Ueberschrift, Text und Buttons nie abgeschnitten werden. */
@@ -73,19 +79,19 @@
   margin: 0 auto;
 }
 .hero .eyebrow {
-  color: var(--forest);
+  color: var(--white);
 }
 .hero .eyebrow::before {
-  background: var(--forest);
+  background: var(--white);
 }
 .hero h1 {
   font-size: var(--fs-hero);
-  color: var(--anthracite);
+  color: var(--white);
   margin: var(--space-sm) 0 var(--space-md);
   max-width: 30ch;
 }
 .hero p.sub {
-  color: var(--anthracite-soft);
+  color: var(--white);
   font-size: 1.15rem;
   max-width: 46ch;
   margin-bottom: var(--space-lg);
@@ -95,17 +101,18 @@
   gap: var(--space-sm);
   flex-wrap: wrap;
 }
+.hero-ctas .btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+}
+.hero-ctas .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: var(--white);
+  color: var(--white);
+}
 @media (max-width: 700px) {
-  /* Mobil (Hochformat): Foto laeuft randlos ueber den gesamten Hero statt der
-     diagonalen Desktop-Ausblendmaske - kein weisser Hintergrund, kein weicher
-     Uebergang. Text sitzt direkt auf dem Foto, daher dunkler Verlauf fuer
-     Lesbarkeit und helle Textfarben. Muss nach den Basis-Hero-Regeln stehen,
-     sonst gewinnen die unconditional .hero-h1/.hero-p.sub-Regeln bei
-     gleicher Spezifitaet durch spaetere Reihenfolge im Stylesheet. */
-  .hero-photo-fade {
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
   .hero {
     aspect-ratio: auto;
     min-height: 640px;
@@ -114,32 +121,6 @@
     display: flex;
     align-items: flex-end;
     padding-bottom: var(--space-xl);
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(15, 21, 18, 0.6) 0%, rgba(15, 21, 18, 0.78) 50%, rgba(15, 21, 18, 0.95) 100%);
-    z-index: 1;
-  }
-  .hero .eyebrow,
-  .hero h1,
-  .hero p.sub {
-    color: var(--white);
-  }
-  .hero .eyebrow::before {
-    background: var(--white);
-  }
-  .hero-ctas .btn-secondary {
-    background: rgba(255, 255, 255, 0.12);
-    color: var(--white);
-    border-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(6px);
-  }
-  .hero-ctas .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.22);
-    border-color: var(--white);
-    color: var(--white);
   }
 }
 .scroll-hint {
