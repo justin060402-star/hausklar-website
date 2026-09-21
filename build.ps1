@@ -43,6 +43,7 @@ $scriptsTpl = @"
 <script src="{{PREFIX}}assets/js/whatsapp-widget.js"></script>
 <script src="{{PREFIX}}assets/js/construction-notice.js"></script>
 <script src="{{PREFIX}}assets/js/scroll-top.js"></script>
+<script src="{{PREFIX}}assets/js/hero-slideshow.js"></script>
 "@
 
 # --- 3) Seiten einlesen & bauen ---
