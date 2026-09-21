@@ -697,21 +697,55 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 0.65rem 0.9rem;
 }
-.service-check {
+.service-chip {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  font-size: 0.87rem;
-  line-height: 1.3;
-  color: var(--anthracite-soft);
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--cream);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--anthracite);
   cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
-.service-check input {
-  accent-color: var(--forest);
+.service-chip:hover {
+  border-color: var(--forest);
+}
+.service-chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.service-chip-check {
+  display: none;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
-  flex-shrink: 0;
-  margin-top: 0.15rem;
+  align-items: center;
+  justify-content: center;
+}
+.service-chip-check svg {
+  width: 14px;
+  height: 14px;
+}
+.service-chip:has(input:checked) {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--white);
+}
+.service-chip:has(input:checked) .service-chip-check {
+  display: flex;
+}
+.service-chip input:focus-visible ~ .service-chip-check,
+.service-chip:has(input:focus-visible) {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
 }
 @media (max-width: 560px) {
   .service-grid {
