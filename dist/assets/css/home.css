@@ -126,6 +126,17 @@
   .hero h1 {
     font-size: var(--fs-h2);
   }
+  .hero-ctas {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+  .hero-ctas .btn {
+    flex: 1 1 0;
+    padding: 0.7rem 0.6rem;
+    font-size: 0.82rem;
+    white-space: normal;
+    text-align: center;
+  }
 }
 .scroll-hint {
   position: absolute;
