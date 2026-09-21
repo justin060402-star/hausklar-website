@@ -734,6 +734,42 @@ p {
   font-size: 0.85rem;
   cursor: pointer;
 }
+.type-toggle {
+  display: flex;
+  gap: 0.6rem;
+}
+.type-toggle-option {
+  position: relative;
+  flex: 1;
+  margin: 0;
+}
+.type-toggle-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.type-toggle-option span {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--anthracite-soft);
+  background: var(--cream);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.type-toggle-option input:checked + span {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--white);
+}
+.type-toggle-option input:focus-visible + span {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
 .form-required-hint {
   font-size: 0.76rem;
   color: var(--anthracite-soft);
