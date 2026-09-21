@@ -126,24 +126,34 @@
       body: formData,
     })
       .then(function (res) {
-        return res.json();
+        return res.json().then(function (data) {
+          return { ok: res.ok, data: data };
+        });
       })
-      .then(function (data) {
-        if (data.success) {
+      .then(function (result) {
+        if (result.data && result.data.success) {
           form.hidden = true;
           if (successBox) successBox.hidden = false;
         } else {
-          throw new Error(data.message || "Unbekannter Fehler");
+          showError((result.data && result.data.message) || "Unbekannter Fehler von Web3Forms");
         }
       })
-      .catch(function () {
-        if (errorBox) errorBox.hidden = false;
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Anfrage senden";
-        }
+      .catch(function (err) {
+        showError("Netzwerkfehler: " + err.message);
       });
   });
+
+  function showError(detail) {
+    if (errorBox) {
+      errorBox.hidden = false;
+      var detailEl = document.getElementById("formErrorDetail");
+      if (detailEl) detailEl.textContent = detail ? "(" + detail + ")" : "";
+    }
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Anfrage senden";
+    }
+  }
 
   if (successCloseBtn) {
     successCloseBtn.addEventListener("click", closeModal);
