@@ -22,11 +22,14 @@
   }
 }
 .slide.kundenstimmen-slide {
-  padding-bottom: calc(var(--header-h) + var(--space-lg));
+  min-height: 0;
+  padding-top: calc(var(--header-h) + var(--space-md));
+  padding-bottom: calc(var(--header-h) + var(--space-md));
 }
 @media (max-width: 700px) {
   .slide.kundenstimmen-slide {
-    padding-bottom: calc(var(--header-h-shrink) + var(--space-md));
+    padding-top: calc(var(--header-h-shrink) + var(--space-sm));
+    padding-bottom: calc(var(--header-h-shrink) + var(--space-sm));
   }
 }
 
