@@ -1253,9 +1253,9 @@ p {
   font-weight: 600;
   max-width: calc(100vw - 2 * var(--space-md));
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(70px);
   pointer-events: none;
-  transition: opacity 0.5s var(--ease-soft), transform 0.5s var(--ease-soft), background 0.25s ease;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease;
 }
 .whatsapp-widget.is-visible {
   opacity: 1;

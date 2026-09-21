@@ -19,21 +19,14 @@
   }
 
   var threshold = hero.offsetHeight;
-  var lastY = window.scrollY;
   var ticking = false;
 
   function onScroll() {
-    var currentY = window.scrollY;
-
-    if (currentY < threshold) {
-      hide();
-    } else if (currentY < lastY - 4) {
+    if (window.scrollY >= threshold) {
       show();
-    } else if (currentY > lastY + 4) {
+    } else {
       hide();
     }
-
-    lastY = currentY;
     ticking = false;
   }
 
@@ -47,4 +40,6 @@
     },
     { passive: true }
   );
+
+  onScroll();
 })();
