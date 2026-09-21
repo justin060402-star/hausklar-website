@@ -123,6 +123,9 @@
     align-items: flex-end;
     padding-bottom: var(--space-xl);
   }
+  .hero h1 {
+    font-size: var(--fs-h2);
+  }
 }
 .scroll-hint {
   position: absolute;
