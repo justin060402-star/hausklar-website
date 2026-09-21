@@ -1,6 +1,10 @@
 (function () {
   "use strict";
 
+  // Auf true setzen, um den Baustellen-Hinweis wieder einzublenden.
+  var ENABLED = false;
+  if (!ENABLED) return;
+
   var STORAGE_KEY = "hausklar-construction-notice-dismissed";
 
   var overlay = document.getElementById("constructionOverlay");
