@@ -697,7 +697,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 0.65rem 0.9rem;
 }
-.service-chip {
+.service-grid .service-chip {
   position: relative;
   display: flex;
   align-items: center;
