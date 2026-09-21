@@ -1,3 +1,11 @@
+/* ===== TEMP: Platzhalter ohne echtes Foto ausblenden =====
+   Betrifft alle Elemente mit class="js-hide-no-photo" (Kacheln, Menüpunkte
+   etc. für Gewerbe- & Großobjekte / Graffiti-Entfernung).
+   ZUM WIEDEREINBLENDEN: diese Regel einfach loeschen oder auskommentieren. */
+.js-hide-no-photo {
+  display: none !important;
+}
+
 /* ===== Reset & Grundlagen ===== */
 *,
 *::before,
