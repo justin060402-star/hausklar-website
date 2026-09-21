@@ -10,12 +10,29 @@
   var gridRow = document.getElementById("serviceGridRow");
   var modalSub = document.getElementById("modalSub");
   var modalTitle = document.getElementById("modalTitle");
+  var submitBtn = document.getElementById("anfrageSubmit");
+  var errorBox = document.getElementById("formError");
+  var successBox = document.getElementById("formSuccess");
+  var successCloseBtn = document.getElementById("formSuccessClose");
 
   if (!overlay || !box || !form) return;
 
   var lockedServices = null;
 
+  function resetFormView() {
+    form.hidden = false;
+    if (successBox) successBox.hidden = true;
+    if (errorBox) errorBox.hidden = true;
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Anfrage senden";
+    }
+  }
+
   function openModal(servicesAttr) {
+    form.reset();
+    resetFormView();
+
     lockedServices = servicesAttr
       ? servicesAttr
           .split(",")
@@ -79,8 +96,8 @@
     e.preventDefault();
     var name = form.name.value.trim();
     var email = form.email.value.trim();
-    var phone = form.phone.value.trim();
-    var message = form.message.value.trim();
+
+    if (!name || !email) return;
 
     var services =
       lockedServices && lockedServices.length
@@ -89,30 +106,46 @@
             return cb.value;
           });
 
-    if (!name || !email) return;
-
-    var photosInput = document.getElementById("af-photos");
-    var photoCount = photosInput && photosInput.files ? photosInput.files.length : 0;
-
-    var subject = "Anfrage: " + (services.length ? services.join(", ") : "Allgemeine Anfrage");
-    var bodyLines = [
-      "Name: " + name,
-      "E-Mail: " + email,
-      "Telefon: " + (phone || "-"),
-      "Gewünschte Leistung(en): " + (services.length ? services.join(", ") : "-"),
-      "",
-      "Nachricht:",
-      message || "-",
-    ];
-    if (photoCount > 0) {
-      bodyLines.push("", "Hinweis: " + photoCount + " Foto(s) ausgewählt – bitte in dieser E-Mail manuell anhängen.");
+    if (errorBox) errorBox.hidden = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Wird gesendet…";
     }
-    var mailto =
-      "mailto:info@hausklar-oberfranken.de?subject=" +
-      encodeURIComponent(subject) +
-      "&body=" +
-      encodeURIComponent(bodyLines.join("\n"));
 
-    window.location.href = mailto;
+    var formData = new FormData(form);
+    formData.delete("leistung");
+    formData.set("Gewünschte Leistung(en)", services.length ? services.join(", ") : "Allgemeine Anfrage");
+    formData.set(
+      "subject",
+      "Anfrage: " + (services.length ? services.join(", ") : "Allgemeine Anfrage")
+    );
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: formData,
+    })
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        if (data.success) {
+          form.hidden = true;
+          if (successBox) successBox.hidden = false;
+        } else {
+          throw new Error(data.message || "Unbekannter Fehler");
+        }
+      })
+      .catch(function () {
+        if (errorBox) errorBox.hidden = false;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Anfrage senden";
+        }
+      });
   });
+
+  if (successCloseBtn) {
+    successCloseBtn.addEventListener("click", closeModal);
+  }
 })();

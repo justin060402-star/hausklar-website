@@ -352,6 +352,11 @@
   <p class="modal-sub" id="modalSub">Wählen Sie eine oder mehrere Leistungen aus – wir melden uns zeitnah mit einer unverbindlichen Einschätzung.</p>
 
   <form id="anfrageForm">
+    <input type="hidden" name="access_key" value="d76a0b8a-ccf1-410f-8147-6e5f0d97fc74" />
+    <input type="hidden" name="subject" value="Neue Anfrage über hausklar-oberfranken.de" />
+    <input type="hidden" name="from_name" value="HausKlar Anfrageformular" />
+    <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+
     <div class="form-row" id="serviceLockedRow" hidden>
       <label>Ausgewählte Leistung</label>
       <div class="service-locked" id="serviceLockedLabel"></div>
@@ -396,7 +401,7 @@
     <div class="form-row">
       <label for="af-photos">Fotos (optional)</label>
       <input type="file" id="af-photos" name="photos" accept="image/*" multiple />
-      <p class="form-hint">Für eine noch genauere Einschätzung können Sie Fotos auswählen – bitte hängen Sie diese anschließend einfach in Ihrem geöffneten E-Mail-Programm an die Nachricht an.</p>
+      <p class="form-hint">Für eine noch genauere Einschätzung können Sie Fotos auswählen – diese werden mit Ihrer Anfrage übermittelt.</p>
     </div>
 
     <p class="form-required-hint">* Pflichtfelder</p>
@@ -414,9 +419,23 @@
       <span class="robot-check-label">Ich bin kein Roboter</span>
     </label>
 
-    <button type="submit" class="btn btn-primary btn-block">Anfrage per E-Mail senden</button>
-    <p class="form-note">Öffnet Ihr E-Mail-Programm mit vorausgefüllter Nachricht an info@hausklar-oberfranken.de</p>
+    <div class="form-status form-status-error" id="formError" hidden>
+      Leider gab es ein Problem beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an
+      <a href="mailto:info@hausklar-oberfranken.de">info@hausklar-oberfranken.de</a>.
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" id="anfrageSubmit">Anfrage senden</button>
+    <p class="form-note">Wir melden uns zeitnah bei Ihnen.</p>
   </form>
+
+  <div class="form-status form-status-success" id="formSuccess" hidden>
+    <div class="form-status-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h4>Vielen Dank für Ihre Anfrage!</h4>
+    <p>Sie wurde erfolgreich übermittelt. Wir melden uns zeitnah mit einer unverbindlichen Einschätzung bei Ihnen.</p>
+    <button type="button" class="btn btn-secondary" id="formSuccessClose">Schließen</button>
+  </div>
 </div>
 
 <div class="cookie-banner" id="cookieBanner" hidden>
