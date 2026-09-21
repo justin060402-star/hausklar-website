@@ -53,13 +53,6 @@
   -webkit-mask-image: linear-gradient(100deg, transparent 0%, transparent 48%, black 68%, black 100%);
   mask-image: linear-gradient(100deg, transparent 0%, transparent 48%, black 68%, black 100%);
 }
-.hero-slide {
-  opacity: 0;
-  transition: opacity 1.6s ease;
-}
-.hero-slide.is-active {
-  opacity: 1;
-}
 /* Kurze Bildschirme (z. B. Smartphone im Querformat): Hero darf ebenfalls frei wachsen,
    damit Ueberschrift, Text und Buttons nie abgeschnitten werden. */
 @media (max-height: 500px) {

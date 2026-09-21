@@ -6,6 +6,15 @@
   display: none !important;
 }
 
+/* ===== Hero-Slideshow (Crossfade) ===== */
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+.hero-slide.is-active {
+  opacity: 1;
+}
+
 /* ===== Reset & Grundlagen ===== */
 *,
 *::before,
