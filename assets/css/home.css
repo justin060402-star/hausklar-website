@@ -119,7 +119,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(31, 53, 39, 0.05) 0%, rgba(31, 53, 39, 0.6) 60%, rgba(31, 53, 39, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(15, 21, 18, 0.6) 0%, rgba(15, 21, 18, 0.78) 50%, rgba(15, 21, 18, 0.95) 100%);
     z-index: 1;
   }
   .hero .eyebrow,
