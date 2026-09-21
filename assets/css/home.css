@@ -86,7 +86,7 @@
   background: var(--white);
 }
 .hero h1 {
-  font-size: var(--fs-hero);
+  font-size: var(--fs-h1);
   color: var(--white);
   margin: var(--space-sm) 0 var(--space-md);
   max-width: 30ch;
