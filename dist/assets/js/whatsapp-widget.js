@@ -13,22 +13,38 @@
     widget.classList.remove("is-visible");
   }
 
-  if (!hero || !("IntersectionObserver" in window)) {
+  if (!hero) {
     window.setTimeout(show, 2500);
     return;
   }
 
-  var observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          hide();
-        } else {
-          show();
-        }
-      });
+  var threshold = hero.offsetHeight;
+  var lastY = window.scrollY;
+  var ticking = false;
+
+  function onScroll() {
+    var currentY = window.scrollY;
+
+    if (currentY < threshold) {
+      hide();
+    } else if (currentY < lastY - 4) {
+      show();
+    } else if (currentY > lastY + 4) {
+      hide();
+    }
+
+    lastY = currentY;
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
     },
-    { threshold: 0 }
+    { passive: true }
   );
-  observer.observe(hero);
 })();
