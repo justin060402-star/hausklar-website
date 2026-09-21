@@ -43,7 +43,7 @@
     if (lockedServices && lockedServices.length) {
       var label = lockedServices.join(" & ");
       modalTitle.textContent = "Jetzt " + label + " anfragen";
-      modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + label + ". Wir melden uns zeitnah mit einer unverbindlichen Einschätzung.";
+      modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + label + ". Wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
       lockedRow.hidden = false;
       lockedLabel.textContent = label;
       gridRow.hidden = true;
@@ -52,7 +52,7 @@
       });
     } else {
       modalTitle.textContent = "Jetzt Anfrage stellen";
-      modalSub.textContent = "Wählen Sie eine oder mehrere Leistungen aus – wir melden uns zeitnah mit einer unverbindlichen Einschätzung.";
+      modalSub.textContent = "Wählen Sie eine oder mehrere Leistungen aus – wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
       lockedRow.hidden = true;
       gridRow.hidden = false;
       form.querySelectorAll('input[name="leistung"]').forEach(function (cb) {
