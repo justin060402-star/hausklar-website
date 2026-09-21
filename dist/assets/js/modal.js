@@ -23,6 +23,8 @@
     form.hidden = false;
     if (successBox) successBox.hidden = true;
     if (errorBox) errorBox.hidden = true;
+    if (modalTitle) modalTitle.hidden = false;
+    if (modalSub) modalSub.hidden = false;
     if (submitBtn) {
       submitBtn.disabled = false;
       submitBtn.textContent = "Anfrage senden";
@@ -133,6 +135,8 @@
       .then(function (result) {
         if (result.data && result.data.success) {
           form.hidden = true;
+          if (modalTitle) modalTitle.hidden = true;
+          if (modalSub) modalSub.hidden = true;
           if (successBox) successBox.hidden = false;
         } else {
           showError((result.data && result.data.message) || "Unbekannter Fehler von Web3Forms");
