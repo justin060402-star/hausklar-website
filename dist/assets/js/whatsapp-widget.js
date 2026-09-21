@@ -22,7 +22,7 @@
   var ticking = false;
 
   function onScroll() {
-    if (trigger.getBoundingClientRect().top <= window.innerHeight * 0.6) {
+    if (trigger.getBoundingClientRect().top <= window.innerHeight) {
       show();
     } else {
       hide();
