@@ -9,6 +9,7 @@ body.page {
   align-items: flex-end;
   color: var(--white);
   overflow: hidden;
+  background: var(--forest-dark);
 }
 .page-hero .img-placeholder {
   position: absolute;
