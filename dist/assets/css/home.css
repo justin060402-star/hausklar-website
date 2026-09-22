@@ -306,6 +306,41 @@
   }
 }
 
+/* --- Vorteile / Kundennutzen --- */
+.benefits {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-xl);
+}
+.benefit {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+.benefit:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.benefit-num {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--sage);
+}
+.benefit-body h3 {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 640px) {
+  .benefit {
+    grid-template-columns: 50px 1fr;
+    gap: var(--space-sm);
+  }
+  .benefit-num {
+    font-size: 1.8rem;
+  }
+}
+
 /* --- Galerie Teaser --- */
 .gallery-grid {
   display: grid;
