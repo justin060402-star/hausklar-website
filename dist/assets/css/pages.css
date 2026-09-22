@@ -186,6 +186,14 @@ section.alt {
   max-width: 52ch;
   margin: 0 auto var(--space-lg);
 }
+@media (max-width: 700px) {
+  .service-cta .btn {
+    width: 100%;
+    white-space: normal;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
 
 /* --- Leistungsübersicht Gruppen --- */
 .services-overview-group + .services-overview-group {
