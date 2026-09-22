@@ -102,13 +102,13 @@
   gap: var(--space-sm);
   flex-wrap: wrap;
 }
-.hero-ctas .btn-secondary {
+.hero .hero-ctas .btn-secondary {
   background: rgba(255, 255, 255, 0.12);
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(6px);
 }
-.hero-ctas .btn-secondary:hover {
+.hero .hero-ctas .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.22);
   border-color: var(--white);
   color: var(--white);
@@ -126,11 +126,11 @@
   .hero h1 {
     font-size: var(--fs-h2);
   }
-  .hero-ctas {
+  .hero .hero-ctas {
     flex-wrap: nowrap;
     gap: 0.5rem;
   }
-  .hero-ctas .btn {
+  .hero .hero-ctas .btn {
     flex: 1 1 0;
     padding: 0.7rem 0.6rem;
     font-size: 0.82rem;
