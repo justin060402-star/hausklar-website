@@ -552,10 +552,9 @@ br.mobile-only {
   color: rgba(255, 255, 255, 0.82);
   padding: var(--space-2xl) 0 var(--space-lg);
 }
-.site-footer .footer-col-heading {
+.site-footer h4 {
   color: var(--white);
   font-size: 0.95rem;
-  font-weight: 700;
   margin-bottom: var(--space-sm);
 }
 .site-footer a {
