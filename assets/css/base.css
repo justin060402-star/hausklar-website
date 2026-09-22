@@ -150,6 +150,14 @@ p {
 .btn-block {
   width: 100%;
 }
+br.mobile-only {
+  display: none;
+}
+@media (max-width: 700px) {
+  br.mobile-only {
+    display: inline;
+  }
+}
 
 /* ===== Header ===== */
 .site-header {
