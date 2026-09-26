@@ -10,12 +10,23 @@
     });
   }
 
+  // Setzt die Vertrauens-Zahlen direkt auf ihren Endwert, ohne Count-Up-Animation.
+  function renderFinalStats() {
+    document.querySelectorAll(".stat-num[data-count]").forEach(function (el) {
+      var end = parseFloat(el.getAttribute("data-count"));
+      var numEl = el.querySelector(".num");
+      if (!numEl) return;
+      numEl.textContent = end % 1 !== 0 ? end.toFixed(1) : Math.round(end);
+    });
+  }
+
   // Sicherheitsnetz nur fuer den Fall, dass GSAP/ScrollTrigger gar nicht laden
   // (CDN-Ausfall, Adblocker) - sonst bliebe alles dauerhaft unsichtbar, da
   // opacity:0 der CSS-Grundzustand ist. Kein pauschaler Timeout mehr, der
   // sonst jedes noch nicht gescrollte Element ungefragt sichtbar schalten wuerde.
   if (typeof gsap === "undefined") {
     showAllReveals();
+    renderFinalStats();
     return;
   }
   if (typeof ScrollTrigger !== "undefined") {
@@ -99,7 +110,7 @@
       numEl.textContent = end % 1 !== 0 ? val.toFixed(1) : Math.round(val);
     }
 
-    if (prefersReduced) {
+    if (prefersReduced || typeof ScrollTrigger === "undefined") {
       render();
       return;
     }
