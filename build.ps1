@@ -32,18 +32,18 @@ $whatsappWidgetTpl = Get-Content (Join-Path $partialsDir "whatsapp-widget.html")
 $constructionNoticeTpl = Get-Content (Join-Path $partialsDir "construction-notice.html") -Raw -Encoding UTF8
 
 $scriptsTpl = @"
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-<script src="{{PREFIX}}assets/js/lenis-init.js"></script>
-<script src="{{PREFIX}}assets/js/animations.js"></script>
-<script src="{{PREFIX}}assets/js/nav.js"></script>
-<script src="{{PREFIX}}assets/js/modal.js"></script>
-<script src="{{PREFIX}}assets/js/cookie-consent.js"></script>
-<script src="{{PREFIX}}assets/js/whatsapp-widget.js"></script>
-<script src="{{PREFIX}}assets/js/construction-notice.js"></script>
-<script src="{{PREFIX}}assets/js/scroll-top.js"></script>
-<script src="{{PREFIX}}assets/js/hero-slideshow.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="{{PREFIX}}assets/js/lenis-init.js" defer></script>
+<script src="{{PREFIX}}assets/js/animations.js" defer></script>
+<script src="{{PREFIX}}assets/js/nav.js" defer></script>
+<script src="{{PREFIX}}assets/js/modal.js" defer></script>
+<script src="{{PREFIX}}assets/js/cookie-consent.js" defer></script>
+<script src="{{PREFIX}}assets/js/whatsapp-widget.js" defer></script>
+<script src="{{PREFIX}}assets/js/construction-notice.js" defer></script>
+<script src="{{PREFIX}}assets/js/scroll-top.js" defer></script>
+<script src="{{PREFIX}}assets/js/hero-slideshow.js" defer></script>
 "@
 
 # --- 3) Seiten einlesen & bauen ---
