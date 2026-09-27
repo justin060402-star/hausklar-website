@@ -1050,6 +1050,7 @@ br.mobile-only {
 
 .google-reviews-card {
   background: var(--white);
+  border: 1px solid var(--forest);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   padding: var(--space-xl);

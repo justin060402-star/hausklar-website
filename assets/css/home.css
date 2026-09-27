@@ -517,6 +517,7 @@
 }
 .testimonial-card {
   background: var(--white);
+  border: 1px solid var(--forest);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   padding: var(--space-lg);
