@@ -485,6 +485,17 @@ br.mobile-only {
   color: var(--forest);
   font-weight: 600;
 }
+.mobile-panel .mobile-panel-cta {
+  display: block;
+  background: var(--forest);
+  color: var(--white);
+  text-align: center;
+  border-radius: 100px;
+  border-bottom: none;
+  padding: 0.9rem 1rem;
+  margin-top: var(--space-md);
+  font-weight: 700;
+}
 .mobile-panel .mobile-sub a {
   font-size: 1rem;
   font-weight: 500;
