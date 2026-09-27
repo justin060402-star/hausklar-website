@@ -544,6 +544,8 @@
   font-size: 0.9rem;
 }
 .testimonial-author span {
+  display: block;
+  margin-top: 0.2rem;
   font-weight: 400;
   color: var(--anthracite-soft);
   font-size: 0.82rem;
