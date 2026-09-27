@@ -191,7 +191,7 @@
     margin-top: var(--space-xl);
   }
   .hero-cta-row {
-    margin-top: calc(var(--space-md) + 19px);
+    margin-top: calc(var(--space-lg) + 20px);
   }
   .hero .hero-ctas {
     flex-wrap: nowrap;
