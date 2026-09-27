@@ -86,11 +86,10 @@
   background: rgba(255, 255, 255, 0.5);
 }
 .hero-eyebrow {
-  display: block;
-  width: 100%;
-  max-width: none;
+  display: inline-block;
+  max-width: 46ch;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 0 0 0.65rem 1.25rem;
+  padding: 0 0 0.65rem;
   margin-bottom: var(--space-xs);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
