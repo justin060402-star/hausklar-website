@@ -186,9 +186,13 @@
   }
   .hero h1 {
     font-size: var(--fs-h2);
+    margin-top: calc(var(--space-sm) + 19px);
   }
   .hero-h1-a {
     margin-top: var(--space-xl);
+  }
+  .hero-cta-row {
+    margin-top: calc(var(--space-md) + 19px);
   }
   .hero .hero-ctas {
     flex-wrap: nowrap;
