@@ -189,14 +189,14 @@
   .hero-eyebrow-full {
     display: none;
   }
-  .hero {
+  .hero.slide {
     aspect-ratio: auto;
     min-height: 725px;
     max-height: none;
     overflow: hidden;
     display: flex;
     align-items: flex-start;
-    padding-top: calc(var(--header-h) + var(--space-md) + 14px);
+    padding-top: calc(var(--header-h) + var(--space-md) + 30px);
     padding-bottom: var(--space-xl);
   }
   .hero h1 {
