@@ -99,6 +99,12 @@
 .hero-eyebrow::before {
   content: none;
 }
+.hero-eyebrow-short {
+  display: none;
+}
+.hero-eyebrow-full {
+  display: inline;
+}
 .hero h1 {
   font-size: var(--fs-h1);
   color: var(--white);
@@ -160,6 +166,12 @@
   font-weight: 700;
 }
 @media (max-width: 700px) {
+  .hero-eyebrow-short {
+    display: inline;
+  }
+  .hero-eyebrow-full {
+    display: none;
+  }
   .hero {
     aspect-ratio: auto;
     min-height: 725px;
