@@ -491,7 +491,11 @@
 /* --- Kundenstimmen: kompaktes Google-Badge + feste Bewertungs-Karten --- */
 .google-reviews-compact {
   max-width: 380px;
-  padding: var(--space-md) var(--space-lg);
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  margin-top: var(--space-md);
 }
 .google-reviews-compact .google-reviews-icon {
   width: 30px;
@@ -547,5 +551,8 @@
 @media (max-width: 900px) {
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+  .testimonial-heading {
+    margin-top: var(--space-lg);
   }
 }
