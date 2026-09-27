@@ -309,6 +309,9 @@
   .split.reverse .split-media {
     order: 0;
   }
+  .split-philosophie .img-placeholder {
+    aspect-ratio: 3/4 !important;
+  }
 }
 
 /* --- Vertrauen / Stats --- */
