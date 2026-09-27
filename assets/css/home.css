@@ -80,10 +80,24 @@
   margin: 0 auto;
 }
 .hero .eyebrow {
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.82);
 }
 .hero .eyebrow::before {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.5);
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-xs);
+  max-width: 46ch;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  white-space: normal;
+}
+.hero-eyebrow::before {
+  margin-top: 0.5em;
+  flex-shrink: 0;
 }
 .hero h1 {
   font-size: var(--fs-h1);
