@@ -312,6 +312,10 @@
   .split-philosophie .img-placeholder {
     aspect-ratio: 3/4 !important;
   }
+  .split-philosophie .eyebrow {
+    position: relative;
+    top: 7px;
+  }
 }
 
 /* --- Vertrauen / Stats --- */
