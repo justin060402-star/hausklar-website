@@ -89,8 +89,8 @@
   display: block;
   width: 100%;
   max-width: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 0.65rem 0 0 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0 0 0.65rem 1.25rem;
   margin-bottom: var(--space-xs);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
