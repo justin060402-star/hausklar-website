@@ -163,6 +163,16 @@
     white-space: normal;
     text-align: center;
   }
+  .hero-content .btn-primary {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-trust {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
 }
 .scroll-hint {
   position: absolute;
