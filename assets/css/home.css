@@ -113,6 +113,27 @@
   border-color: var(--white);
   color: var(--white);
 }
+.hero-banner-cta {
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.hero-banner-cta:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 .hero-trust {
   display: inline-flex;
   align-items: center;
