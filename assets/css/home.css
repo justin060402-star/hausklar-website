@@ -487,3 +487,64 @@
     padding: calc(var(--header-h-shrink) + var(--space-md)) 0 var(--space-xl);
   }
 }
+
+/* --- Kundenstimmen: kompaktes Google-Badge + feste Bewertungs-Karten --- */
+.google-reviews-compact {
+  max-width: 380px;
+  padding: var(--space-md) var(--space-lg);
+}
+.google-reviews-compact .google-reviews-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: var(--space-sm);
+}
+.google-reviews-compact .google-reviews-text {
+  font-size: 0.95rem;
+}
+.google-reviews-compact .btn {
+  font-size: 0.85rem;
+  padding: 0.6rem 1.2rem;
+}
+.testimonial-heading {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-lg);
+}
+.testimonial-stars {
+  color: #f5b400;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+}
+.testimonial-quote {
+  color: var(--anthracite);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+.testimonial-author {
+  font-weight: 700;
+  color: var(--forest);
+  font-size: 0.9rem;
+}
+.testimonial-author span {
+  font-weight: 400;
+  color: var(--anthracite-soft);
+  font-size: 0.82rem;
+}
+@media (max-width: 900px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
