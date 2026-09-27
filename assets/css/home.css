@@ -113,6 +113,27 @@
   border-color: var(--white);
   color: var(--white);
 }
+.hero-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: var(--space-md);
+  color: var(--white);
+  font-size: 0.95rem;
+}
+.hero-trust-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.hero-trust-stars {
+  color: #ffc107;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+.hero-trust-text strong {
+  font-weight: 700;
+}
 @media (max-width: 700px) {
   .hero {
     aspect-ratio: auto;
