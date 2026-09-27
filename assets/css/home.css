@@ -10,6 +10,20 @@
 .slide-inner {
   width: 100%;
 }
+/* Slides mit Bild+Text (.split) sollen sich am Inhalt orientieren statt
+   auf volle Bildschirmhoehe zentriert zu werden - sonst entsteht bei
+   kuerzerem Inhalt viel toter Raum vor/nach dem Bild. */
+.slide:has(.split) {
+  min-height: 0;
+  padding-top: calc(var(--header-h) + var(--space-lg));
+  padding-bottom: var(--space-xl);
+}
+@media (max-width: 700px) {
+  .slide:has(.split) {
+    padding-top: calc(var(--header-h-shrink) + var(--space-md));
+    padding-bottom: var(--space-lg);
+  }
+}
 .slide.slide-compact {
   min-height: 0;
   padding-top: calc(var(--header-h) + var(--space-md));
