@@ -110,6 +110,10 @@
   margin: var(--space-sm) 0 var(--space-md);
   max-width: 30ch;
 }
+.hero-h1-q,
+.hero-h1-a {
+  display: block;
+}
 .hero p.sub {
   color: var(--white);
   font-size: 1.15rem;
@@ -177,11 +181,14 @@
     max-height: none;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     padding-bottom: var(--space-xl);
   }
   .hero h1 {
     font-size: var(--fs-h2);
+  }
+  .hero-h1-a {
+    margin-top: var(--space-xl);
   }
   .hero .hero-ctas {
     flex-wrap: nowrap;
