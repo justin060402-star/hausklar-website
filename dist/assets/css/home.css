@@ -312,7 +312,8 @@
   .split-philosophie .img-placeholder {
     aspect-ratio: 3/4 !important;
   }
-  .split-philosophie .eyebrow {
+  .split-philosophie .eyebrow,
+  .split-spezialgebiet .eyebrow {
     position: relative;
     top: 7px;
   }
