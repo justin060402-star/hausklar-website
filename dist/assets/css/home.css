@@ -538,6 +538,13 @@
   line-height: 1.6;
   margin-bottom: var(--space-md);
 }
+.testimonial-quote-line {
+  display: block;
+  padding-left: 1em;
+}
+.testimonial-quote-gap {
+  margin-top: 1em;
+}
 .testimonial-author {
   font-weight: 700;
   color: var(--forest);
