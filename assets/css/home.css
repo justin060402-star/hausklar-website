@@ -186,7 +186,6 @@
   }
   .hero h1 {
     font-size: var(--fs-h2);
-    margin-top: calc(var(--space-sm) + 19px);
   }
   .hero-h1-a {
     margin-top: var(--space-xl);
