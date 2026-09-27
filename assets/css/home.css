@@ -196,6 +196,7 @@
     overflow: hidden;
     display: flex;
     align-items: flex-start;
+    padding-top: calc(var(--header-h) + var(--space-md) + 14px);
     padding-bottom: var(--space-xl);
   }
   .hero h1 {
