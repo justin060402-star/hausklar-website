@@ -187,6 +187,11 @@ section.alt {
   margin: 0 auto var(--space-lg);
 }
 @media (max-width: 700px) {
+  .service-cta {
+    width: auto;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
   .service-cta .btn {
     width: 100%;
     white-space: normal;
