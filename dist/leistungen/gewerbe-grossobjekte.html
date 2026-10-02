@@ -409,6 +409,20 @@
     <input type="hidden" name="from_name" value="HausKlar Anfrageformular" />
     <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display:none" tabindex="-1" autocomplete="off" />
 
+    <div class="form-row">
+      <label>Wünschen Sie eine unverbindliche und kostenlose 1m² Probefläche bei Ihnen zuhause?</label>
+      <div class="type-toggle">
+        <label class="type-toggle-option">
+          <input type="radio" name="probeflaeche" value="Ja" />
+          <span>Ja</span>
+        </label>
+        <label class="type-toggle-option">
+          <input type="radio" name="probeflaeche" value="Nein" />
+          <span>Nein</span>
+        </label>
+      </div>
+    </div>
+
     <div class="form-row" id="serviceLockedRow" hidden>
       <label>Ausgewählte Leistung</label>
       <div class="service-locked" id="serviceLockedLabel"></div>
@@ -524,11 +538,6 @@
       <label for="af-message">Nachricht</label>
       <textarea id="af-message" name="message" placeholder="Beschreiben Sie kurz Ihr Anliegen, Objektgröße, gewünschten Zeitraum …"></textarea>
     </div>
-
-    <label class="consent-check">
-      <input type="checkbox" name="probeflaeche" id="af-probeflaeche" />
-      <span>Ja, ich interessiere mich zusätzlich für eine kostenlose Probefläche (unverbindlich)</span>
-    </label>
 
     <p class="form-required-hint">* Pflichtfelder</p>
 
