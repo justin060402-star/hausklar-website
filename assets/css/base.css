@@ -1044,6 +1044,12 @@ br.mobile-only {
   aspect-ratio: 4/3;
   min-height: 0;
 }
+@supports not (aspect-ratio: 1/1) {
+  .service-card .img-placeholder {
+    height: 0;
+    padding-bottom: 75%;
+  }
+}
 .service-card-body {
   padding: var(--space-sm) var(--space-md) var(--space-md);
 }
