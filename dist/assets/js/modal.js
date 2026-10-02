@@ -18,6 +18,20 @@
   if (!overlay || !box || !form) return;
 
   var lockedServices = null;
+  var requestType = null;
+  var requestTypeRow = document.getElementById("requestTypeRow");
+  var requestTypeLabel = document.getElementById("requestTypeLabel");
+
+  function ensureRequestTypeRow() {
+    if (requestTypeRow || !lockedRow) return;
+    requestTypeRow = document.createElement("div");
+    requestTypeRow.className = "form-row";
+    requestTypeRow.id = "requestTypeRow";
+    requestTypeRow.hidden = true;
+    requestTypeRow.innerHTML = '<label>Anfrageart</label><div class="service-locked" id="requestTypeLabel"></div>';
+    lockedRow.parentNode.insertBefore(requestTypeRow, lockedRow);
+    requestTypeLabel = requestTypeRow.querySelector("#requestTypeLabel");
+  }
 
   function resetFormView() {
     form.hidden = false;
@@ -31,9 +45,10 @@
     }
   }
 
-  function openModal(servicesAttr) {
+  function openModal(servicesAttr, requestTypeAttr) {
     form.reset();
     resetFormView();
+    ensureRequestTypeRow();
 
     lockedServices = servicesAttr
       ? servicesAttr
@@ -41,17 +56,24 @@
           .map(function (s) { return s.trim(); })
           .filter(Boolean)
       : null;
+    requestType = requestTypeAttr ? requestTypeAttr.trim() : null;
 
     if (lockedServices && lockedServices.length) {
       var label = lockedServices.join(" & ");
-      modalTitle.textContent = "Jetzt " + label + " anfragen";
-      modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + label + ". Wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
       lockedRow.hidden = false;
       lockedLabel.textContent = label;
       gridRow.hidden = true;
       form.querySelectorAll('input[name="leistung"]').forEach(function (cb) {
         cb.checked = lockedServices.indexOf(cb.value) !== -1;
       });
+
+      if (requestType) {
+        modalTitle.textContent = requestType + " – " + label;
+        modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + requestType + " (" + label + "). Wir melden uns noch am selben Tag bei Ihnen.";
+      } else {
+        modalTitle.textContent = "Jetzt " + label + " anfragen";
+        modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + label + ". Wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
+      }
     } else {
       modalTitle.textContent = "Jetzt Anfrage stellen";
       modalSub.textContent = "Wählen Sie eine oder mehrere Leistungen aus – wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
@@ -60,6 +82,15 @@
       form.querySelectorAll('input[name="leistung"]').forEach(function (cb) {
         cb.checked = false;
       });
+    }
+
+    if (requestTypeRow) {
+      if (requestType) {
+        requestTypeRow.hidden = false;
+        requestTypeLabel.textContent = requestType;
+      } else {
+        requestTypeRow.hidden = true;
+      }
     }
 
     overlay.classList.add("is-open");
@@ -84,7 +115,7 @@
   document.querySelectorAll(".js-open-anfrage").forEach(function (trigger) {
     trigger.addEventListener("click", function (e) {
       e.preventDefault();
-      openModal(trigger.getAttribute("data-services"));
+      openModal(trigger.getAttribute("data-services"), trigger.getAttribute("data-request-type"));
     });
   });
 
@@ -117,9 +148,10 @@
     var formData = new FormData(form);
     formData.delete("leistung");
     formData.set("Gewünschte Leistung(en)", services.length ? services.join(", ") : "Allgemeine Anfrage");
+    if (requestType) formData.set("Anfrageart", requestType);
     formData.set(
       "subject",
-      "Anfrage: " + (services.length ? services.join(", ") : "Allgemeine Anfrage")
+      "Anfrage: " + (requestType ? requestType + " – " : "") + (services.length ? services.join(", ") : "Allgemeine Anfrage")
     );
 
     fetch("https://api.web3forms.com/submit", {
