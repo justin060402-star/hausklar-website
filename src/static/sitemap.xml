@@ -46,6 +46,46 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.hausklar-oberfranken.de/leistungen/fensterreinigung-bayreuth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/leistungen/fensterreinigung-roedental</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/leistungen/fensterreinigung-itzgrund</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/leistungen/fensterreinigung-staffelstein</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/leistungen/fensterreinigung-kulmbach</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/leistungen/fensterreinigung-neustadt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/leistungen/fensterreinigung-kronach</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hausklar-oberfranken.de/leistungen/fensterreinigung-lichtenfels</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.hausklar-oberfranken.de/leistungen/solar-photovoltaik</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
