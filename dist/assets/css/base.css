@@ -883,9 +883,18 @@ br.mobile-only {
 .consent-check {
   display: flex;
   align-items: flex-start;
-  gap: 0.6rem;
+  gap: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--cream);
+  padding: 0.75rem 1rem;
   margin-bottom: var(--space-sm);
   cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.consent-check:has(input:checked) {
+  border-color: var(--forest);
+  background: var(--white);
 }
 .consent-check input {
   margin-top: 0.2rem;
@@ -908,7 +917,7 @@ br.mobile-only {
   border-radius: var(--radius-sm);
   background: var(--cream);
   padding: 0.75rem 1rem;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   cursor: pointer;
   transition: border-color 0.25s ease, background 0.25s ease;
 }
