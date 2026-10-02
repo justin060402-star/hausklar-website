@@ -15,6 +15,13 @@ body.page {
   padding: 0;
   align-items: flex-start;
 }
+@media (max-width: 700px) {
+  .hero-cta-center {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .page-hero .img-placeholder {
   position: absolute;
   inset: 0;
