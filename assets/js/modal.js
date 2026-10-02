@@ -145,13 +145,17 @@
       submitBtn.textContent = "Wird gesendet…";
     }
 
+    var wantsProbeflaeche = !!form.querySelector('input[name="probeflaeche"]:checked');
+
     var formData = new FormData(form);
     formData.delete("leistung");
+    formData.delete("probeflaeche");
     formData.set("Gewünschte Leistung(en)", services.length ? services.join(", ") : "Allgemeine Anfrage");
     if (requestType) formData.set("Anfrageart", requestType);
+    formData.set("Kostenlose Probefläche gewünscht", wantsProbeflaeche ? "Ja" : "Nein");
     formData.set(
       "subject",
-      "Anfrage: " + (requestType ? requestType + " – " : "") + (services.length ? services.join(", ") : "Allgemeine Anfrage")
+      "Anfrage: " + (requestType ? requestType + " – " : "") + (services.length ? services.join(", ") : "Allgemeine Anfrage") + (wantsProbeflaeche ? " (+ Probefläche)" : "")
     );
 
     fetch("https://api.web3forms.com/submit", {
