@@ -5,6 +5,7 @@ body.page {
 .page-hero {
   position: relative;
   min-height: 62vh;
+  min-height: 62dvh;
   display: flex;
   align-items: flex-end;
   color: var(--white);
