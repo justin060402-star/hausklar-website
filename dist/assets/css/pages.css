@@ -11,6 +11,9 @@ body.page {
   color: var(--white);
   overflow: hidden;
 }
+.page-hero.page-hero-top {
+  align-items: flex-start;
+}
 .page-hero .img-placeholder {
   position: absolute;
   inset: 0;
