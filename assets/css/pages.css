@@ -120,6 +120,9 @@ section.alt {
 .detail-text h3 {
   margin-bottom: var(--space-sm);
 }
+.detail-text + .detail-text {
+  margin-top: var(--space-lg);
+}
 .detail-text ul {
   margin-top: var(--space-sm);
   display: flex;
