@@ -120,8 +120,16 @@ section.alt {
 .detail-text h3 {
   margin-bottom: var(--space-sm);
 }
-.detail-text + .detail-text {
-  margin-top: var(--space-lg);
+.topic-block > .eyebrow {
+  margin-bottom: var(--space-sm);
+}
+.topic-block h3 {
+  margin-bottom: var(--space-sm);
+}
+.topic-block + .topic-block {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--line);
 }
 .detail-text ul {
   margin-top: var(--space-sm);
