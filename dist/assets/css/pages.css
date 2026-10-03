@@ -108,6 +108,9 @@ section.alt {
 .detail-block + .detail-block {
   margin-top: var(--space-2xl);
 }
+.detail-block + .detail-text {
+  margin-top: var(--space-2xl);
+}
 .detail-block.reverse .detail-media {
   order: 2;
 }
