@@ -86,12 +86,6 @@ button {
   height: 1.5px;
   background: var(--forest);
 }
-.eyebrow-plain {
-  color: var(--anthracite);
-}
-.eyebrow-plain::before {
-  display: none;
-}
 h1,
 h2,
 h3 {
