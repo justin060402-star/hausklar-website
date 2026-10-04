@@ -188,6 +188,35 @@ section.alt {
   margin-bottom: 0;
   flex-shrink: 0;
 }
+.link-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.link-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--forest);
+  background: var(--sand-soft);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.link-pill:hover {
+  background: var(--white);
+  border-color: var(--forest);
+}
+.link-pill.link-pill-accent {
+  color: var(--white);
+  background: var(--forest);
+}
+.link-pill.link-pill-accent:hover {
+  background: var(--forest-dark);
+  border-color: var(--forest-dark);
+}
 .tag {
   display: inline-block;
   font-size: 0.72rem;
