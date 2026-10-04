@@ -738,10 +738,6 @@ br.mobile-only {
   font-weight: 600;
   color: var(--forest);
 }
-#serviceGridRow {
-  /* Temporär ausgeblendet auf Kundenwunsch, Code bleibt für später erhalten */
-  display: none !important;
-}
 .service-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
