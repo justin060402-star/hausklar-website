@@ -760,6 +760,9 @@ br.mobile-only {
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
+.service-grid .service-chip[hidden] {
+  display: none;
+}
 .service-chip:hover {
   border-color: var(--forest);
 }
