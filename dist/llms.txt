@@ -72,4 +72,4 @@ Coburg, Lichtenfels, Kulmbach, Bayreuth, Bamberg, Ebern, Itzgrund, Rödental, Ne
 - Wird mit Chemikalien gearbeitet? Nein, standardmäßig chemiefrei – Heißwasser-Dampfverfahren bis 150 °C oder reguliertes Kaltwasser.
 - Ist für Dach-, Fassaden-, Solar- oder Fensterreinigung ein Gerüst nötig? In den meisten Fällen nicht, dank Teleskoplanzen-Technik vom Boden aus.
 - Was kostet eine professionelle Außenflächenreinigung? Abhängig von Flächengröße, Material und Verschmutzungsgrad – nach unverbindlicher Einschätzung wird ein Angebot erstellt.
-- Vollständige FAQ mit allen Details: /kontakt
+- Vollständige FAQ mit allen Details: /faq
