@@ -61,3 +61,15 @@
     --fs-eyebrow: 0.92rem;
   }
 }
+
+/* Auf Mobile sind die grossen Abstaende (fuer Desktop-Scroll-Praesentation gedacht)
+   deutlich zu viel Leerraum zwischen Abschnitten. Da fast alle Sektions-, Block- und
+   Abstandsregeln im CSS ueber diese Variablen laufen, wirkt eine Reduktion hier
+   automatisch ueberall, statt jede einzelne Regel separat anpassen zu muessen. */
+@media (max-width: 700px) {
+  :root {
+    --space-lg: 1.75rem;
+    --space-xl: 2.25rem;
+    --space-2xl: 2.75rem;
+  }
+}
