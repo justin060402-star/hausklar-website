@@ -188,6 +188,13 @@ section.alt {
   margin-bottom: 0;
   flex-shrink: 0;
 }
+@media (max-width: 700px) {
+  .protect-box {
+    flex-direction: column;
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+}
 .link-pill-row {
   display: flex;
   flex-wrap: wrap;
