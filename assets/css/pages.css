@@ -80,6 +80,14 @@ section {
 section.tight {
   padding: var(--space-xl) 0;
 }
+@media (max-width: 700px) {
+  section {
+    padding: var(--space-lg) 0;
+  }
+  section.tight {
+    padding: var(--space-md) 0;
+  }
+}
 section.alt {
   background: var(--sand-soft);
 }
