@@ -957,7 +957,6 @@ br.mobile-only {
   flex-shrink: 0;
 }
 .robot-check-icon {
-  margin-left: auto;
   width: 22px;
   height: 22px;
   flex-shrink: 0;
@@ -971,7 +970,7 @@ br.mobile-only {
 .robot-check-label {
   font-size: 0.87rem;
   color: var(--anthracite);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* ===== Bild-Platzhalter ===== */
