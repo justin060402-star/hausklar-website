@@ -75,8 +75,8 @@
         modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + label + ". Wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
       }
     } else {
-      modalTitle.textContent = "Jetzt Anfrage stellen";
-      modalSub.textContent = "Wählen Sie eine oder mehrere Leistungen aus – wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
+      modalTitle.textContent = "Sagen Sie uns welche Flächen wir Reinigen sollen!";
+      modalSub.textContent = "Wählen Sie Ihr gewünschte Leistung aus und wir melden uns noch am selben Tag bei ihnen mit einer unverbindlichen kostenlosen Ersteinschätzung.";
       lockedRow.hidden = true;
       gridRow.hidden = false;
       form.querySelectorAll('input[name="leistung"]').forEach(function (cb) {
