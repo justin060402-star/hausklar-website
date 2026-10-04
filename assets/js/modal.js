@@ -76,7 +76,7 @@
       }
     } else {
       modalTitle.textContent = "Sagen Sie uns welche Flächen wir Reinigen sollen!";
-      modalSub.textContent = "Wählen Sie Ihr gewünschte Leistung aus und wir melden uns noch am selben Tag bei ihnen mit einer unverbindlichen kostenlosen Ersteinschätzung.";
+      modalSub.textContent = "Wählen Sie Ihre gewünschte Leistung aus und wir melden uns noch am selben Tag mit einer unverbindlichen kostenlosen Ersteinschätzung bei Ihnen.";
       lockedRow.hidden = true;
       gridRow.hidden = false;
       form.querySelectorAll('input[name="leistung"]').forEach(function (cb) {
