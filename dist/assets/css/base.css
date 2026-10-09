@@ -985,6 +985,9 @@ br.mobile-only {
   isolation: isolate;
   min-height: 220px;
 }
+.img-placeholder > img {
+  z-index: 1;
+}
 .img-placeholder::before {
   content: "";
   position: absolute;
