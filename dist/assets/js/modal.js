@@ -75,7 +75,7 @@
         modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + label + ". Wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
       }
     } else {
-      modalTitle.textContent = "Sagen Sie uns welche Flächen wir Reinigen sollen!";
+      modalTitle.textContent = "Teilen Sie uns hier mit welche Flächen wir für Sie Reinigen sollen!";
       modalSub.textContent = "Wählen Sie Ihre gewünschte Leistung aus und wir melden uns noch am selben Tag mit einer unverbindlichen kostenlosen Ersteinschätzung bei Ihnen.";
       lockedRow.hidden = true;
       gridRow.hidden = false;
