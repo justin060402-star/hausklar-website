@@ -272,6 +272,7 @@ br.mobile-only {
   color: var(--anthracite);
   padding: 0.5rem 0.1rem;
   position: relative;
+  white-space: nowrap;
 }
 .nav-link::after {
   content: "";
