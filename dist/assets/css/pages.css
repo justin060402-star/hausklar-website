@@ -70,6 +70,12 @@ body.page {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+@media (min-width: 701px) {
+  .page-hero h1.agb-hero-title {
+    max-width: 34ch;
+    hyphens: none;
+  }
+}
 .page-hero .lead {
   color: rgba(255, 255, 255, 0.88);
   max-width: 56ch;
