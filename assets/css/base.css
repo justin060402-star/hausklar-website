@@ -606,6 +606,14 @@ br.mobile-only {
   max-width: 320px;
   margin: 0;
 }
+.footer-logo-link {
+  display: inline-block;
+}
+.footer-logo-img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
 .footer-links {
   display: flex;
   flex-wrap: wrap;
