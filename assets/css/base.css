@@ -1151,17 +1151,13 @@ br.mobile-only {
 /* ===== Cookie-Hinweis ===== */
 .cookie-banner {
   position: fixed;
-  left: var(--space-md);
-  right: var(--space-md);
-  bottom: var(--space-md);
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 900;
-  max-width: 480px;
-  margin: 0 auto;
   background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
+  border-top: 1px solid var(--line);
   box-shadow: var(--shadow-soft);
-  padding: var(--space-lg);
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.4s var(--ease-soft), transform 0.4s var(--ease-soft);
@@ -1172,6 +1168,12 @@ br.mobile-only {
 }
 .cookie-banner[hidden] {
   display: none;
+}
+.cookie-banner-inner {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-lg);
 }
 .cookie-banner-close {
   position: absolute;
@@ -1244,14 +1246,8 @@ br.mobile-only {
   flex: 1 1 auto;
 }
 @media (max-width: 560px) {
-  .cookie-banner {
-    left: var(--space-sm);
-    right: var(--space-sm);
-    bottom: var(--space-sm);
+  .cookie-banner-inner {
     padding: var(--space-md);
-  }
-  .cookie-banner-actions {
-    flex-direction: column;
   }
 }
 
