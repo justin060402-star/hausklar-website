@@ -23,10 +23,11 @@
 
   var banner = document.getElementById("cookieBanner");
   var acceptAllBtn = document.getElementById("cookieBannerAcceptAll");
+  var rejectAllBtn = document.getElementById("cookieBannerRejectAll");
   var saveBtn = document.getElementById("cookieBannerSave");
   var closeBtn = document.getElementById("cookieBannerClose");
   var fontsCheckbox = document.getElementById("cookieBannerFonts");
-  if (!banner || !acceptAllBtn || !saveBtn || !fontsCheckbox) return;
+  if (!banner || !acceptAllBtn || !rejectAllBtn || !saveBtn || !fontsCheckbox) return;
 
   if (stored === "all") {
     fontsCheckbox.checked = true;
@@ -53,6 +54,10 @@
   acceptAllBtn.addEventListener("click", function () {
     fontsCheckbox.checked = true;
     dismiss("all");
+  });
+  rejectAllBtn.addEventListener("click", function () {
+    fontsCheckbox.checked = false;
+    dismiss("essential");
   });
   saveBtn.addEventListener("click", function () {
     dismiss(fontsCheckbox.checked ? "all" : "essential");
