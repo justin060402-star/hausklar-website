@@ -67,6 +67,8 @@ body.page {
   color: var(--white);
   max-width: 22ch;
   margin-bottom: var(--space-sm);
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .page-hero .lead {
   color: rgba(255, 255, 255, 0.88);
