@@ -635,11 +635,23 @@
 </div>
 
 <div class="cookie-banner" id="cookieBanner" hidden>
+  <button type="button" class="cookie-banner-close" id="cookieBannerClose" aria-label="Schließen">✕</button>
+  <h3 class="cookie-banner-title">Diese Website verwendet Cookies.</h3>
   <div class="cookie-banner-text">
-    <p>Wir verwenden keine Tracking- oder Marketing-Cookies. Bei „Alle akzeptieren" laden wir zusätzlich Google Fonts extern nach (schönere Schrift, dabei wird Ihre IP-Adresse an Google übermittelt). Bei „Nur notwendige" verzichten wir darauf und nutzen die Systemschrift Ihres Geräts. Details in unserer <a href="../datenschutz">Datenschutzerklärung</a>.</p>
+    <p>Wir verwenden selbst keine Cookies. Bei „Alle akzeptieren" laden wir zusätzlich Google Fonts extern nach (schönere Schrift) – dabei wird Ihre IP-Adresse an Google übermittelt. Details in unserer <a href="../datenschutz">Datenschutzerklärung</a>.</p>
+  </div>
+  <div class="cookie-banner-options">
+    <label class="cookie-banner-option is-disabled">
+      <input type="checkbox" checked disabled />
+      <span>Technisch notwendig</span>
+    </label>
+    <label class="cookie-banner-option">
+      <input type="checkbox" id="cookieBannerFonts" />
+      <span>Externe Schriftarten (Google Fonts)</span>
+    </label>
   </div>
   <div class="cookie-banner-actions">
-    <button type="button" class="btn btn-secondary cookie-banner-btn" id="cookieBannerEssential">Nur notwendige</button>
+    <button type="button" class="btn btn-secondary cookie-banner-btn" id="cookieBannerSave">Auswahl speichern</button>
     <button type="button" class="btn btn-primary cookie-banner-btn" id="cookieBannerAcceptAll">Alle akzeptieren</button>
   </div>
 </div>

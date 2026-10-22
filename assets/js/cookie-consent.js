@@ -23,8 +23,14 @@
 
   var banner = document.getElementById("cookieBanner");
   var acceptAllBtn = document.getElementById("cookieBannerAcceptAll");
-  var essentialBtn = document.getElementById("cookieBannerEssential");
-  if (!banner || !acceptAllBtn || !essentialBtn) return;
+  var saveBtn = document.getElementById("cookieBannerSave");
+  var closeBtn = document.getElementById("cookieBannerClose");
+  var fontsCheckbox = document.getElementById("cookieBannerFonts");
+  if (!banner || !acceptAllBtn || !saveBtn || !fontsCheckbox) return;
+
+  if (stored === "all") {
+    fontsCheckbox.checked = true;
+  }
 
   if (!stored) {
     banner.hidden = false;
@@ -45,9 +51,15 @@
   }
 
   acceptAllBtn.addEventListener("click", function () {
+    fontsCheckbox.checked = true;
     dismiss("all");
   });
-  essentialBtn.addEventListener("click", function () {
-    dismiss("essential");
+  saveBtn.addEventListener("click", function () {
+    dismiss(fontsCheckbox.checked ? "all" : "essential");
   });
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      dismiss(fontsCheckbox.checked ? "all" : "essential");
+    });
+  }
 })();
