@@ -4,7 +4,6 @@
   var header = document.getElementById("siteHeader");
   var mobileToggle = document.getElementById("mobileToggle");
   var mobilePanel = document.getElementById("mobilePanel");
-  var mobilePanelBackdrop = document.getElementById("mobilePanelBackdrop");
 
   function onScroll() {
     if (!header) return;
@@ -22,26 +21,15 @@
       var isOpen = mobilePanel.classList.toggle("is-open");
       mobileToggle.classList.toggle("is-open", isOpen);
       mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      if (mobilePanelBackdrop) mobilePanelBackdrop.classList.toggle("is-open", isOpen);
       document.body.style.overflow = isOpen ? "hidden" : "";
     });
     mobilePanel.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         mobilePanel.classList.remove("is-open");
         mobileToggle.classList.remove("is-open");
-        if (mobilePanelBackdrop) mobilePanelBackdrop.classList.remove("is-open");
         document.body.style.overflow = "";
       });
     });
-    if (mobilePanelBackdrop) {
-      mobilePanelBackdrop.addEventListener("click", function () {
-        mobilePanel.classList.remove("is-open");
-        mobileToggle.classList.remove("is-open");
-        mobileToggle.setAttribute("aria-expanded", "false");
-        mobilePanelBackdrop.classList.remove("is-open");
-        document.body.style.overflow = "";
-      });
-    }
   }
 
   // Leistungen-Untermenue im Mobile-Panel als Akkordeon auf-/zuklappen
