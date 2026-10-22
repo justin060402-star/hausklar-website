@@ -81,6 +81,53 @@ body.page {
   max-width: 56ch;
   font-size: 1.08rem;
 }
+.page-hero .hero-trust-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+.page-hero .hero-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--white);
+  font-size: 1.15rem;
+}
+.page-hero .hero-trust-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.page-hero .hero-trust-stars {
+  color: #ffc107;
+  letter-spacing: 0.05em;
+  font-size: 1.05rem;
+}
+.page-hero .hero-trust-text strong {
+  font-weight: 700;
+}
+.page-hero .hero-trust-link {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  text-decoration: underline;
+}
+.page-hero .hero-trust-link:hover {
+  color: var(--white);
+}
+@media (max-width: 700px) {
+  .page-hero .hero-trust {
+    font-size: 0.95rem;
+  }
+  .page-hero .hero-trust-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .page-hero .hero-trust-stars {
+    font-size: 0.9rem;
+  }
+}
 
 section {
   padding: var(--space-2xl) 0;
