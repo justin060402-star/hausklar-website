@@ -638,7 +638,7 @@ br.mobile-only {
 }
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem 1.2rem;
@@ -661,7 +661,7 @@ br.mobile-only {
   }
   .footer-bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.4rem;
   }
 }
