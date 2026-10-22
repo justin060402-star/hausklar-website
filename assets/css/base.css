@@ -432,13 +432,17 @@ br.mobile-only {
 
 .mobile-panel {
   position: fixed;
-  inset: 0;
   top: var(--header-h-shrink);
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 50%;
   background: var(--cream);
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
   z-index: 450;
   padding: var(--space-lg) var(--space-sm) var(--space-2xl);
   overflow-y: auto;
-  transform: translateY(-12px);
+  transform: translateX(100%);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
@@ -446,7 +450,7 @@ br.mobile-only {
 .mobile-panel.is-open {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .mobile-panel a {
   display: block;
