@@ -430,13 +430,33 @@ br.mobile-only {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.mobile-panel-backdrop {
+  position: fixed;
+  top: var(--header-h-shrink);
+  left: 0;
+  right: 60%;
+  bottom: 0;
+  z-index: 440;
+  background: rgba(250, 249, 244, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s;
+}
+.mobile-panel-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 .mobile-panel {
   position: fixed;
   top: var(--header-h-shrink);
   right: 0;
   bottom: 0;
   left: auto;
-  width: 50%;
+  width: 60%;
   background: var(--cream);
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
   z-index: 450;
