@@ -625,8 +625,9 @@ br.mobile-only {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.2fr;
-  gap: var(--space-lg);
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  gap: var(--space-lg) var(--space-2xl);
   padding: var(--space-lg) 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
