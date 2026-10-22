@@ -640,6 +640,11 @@ br.mobile-only {
 .footer-hours-mobile {
   display: none;
 }
+.footer-hours-label {
+  font-weight: 700;
+  color: var(--white);
+  margin-top: var(--space-sm);
+}
 .footer-bottom {
   display: flex;
   justify-content: center;
