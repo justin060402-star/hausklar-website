@@ -480,6 +480,53 @@ section.alt {
   margin: 0;
   color: var(--anthracite-soft);
 }
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+.faq-accordion-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.faq-accordion-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+.faq-accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-accordion-item summary .faq-accordion-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid var(--forest);
+  color: var(--forest);
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.faq-accordion-item[open] summary .faq-accordion-icon {
+  transform: rotate(45deg);
+}
+.faq-accordion-item .faq-accordion-answer {
+  margin: 0;
+  padding: 0 var(--space-lg) var(--space-lg);
+  color: var(--anthracite-soft);
+}
 .contact-form-card {
   background: var(--white);
   border-radius: var(--radius-lg);
