@@ -14,22 +14,8 @@
   var errorBox = document.getElementById("formError");
   var successBox = document.getElementById("formSuccess");
   var successCloseBtn = document.getElementById("formSuccessClose");
-  var photoInput = document.getElementById("af-photos");
-  var photoName = document.getElementById("af-photos-name");
 
   if (!overlay || !box || !form) return;
-
-  if (photoInput && photoName) {
-    photoInput.addEventListener("change", function () {
-      if (photoInput.files.length === 0) {
-        photoName.textContent = "Keine Datei ausgewählt";
-      } else if (photoInput.files.length === 1) {
-        photoName.textContent = photoInput.files[0].name;
-      } else {
-        photoName.textContent = photoInput.files.length + " Dateien ausgewählt";
-      }
-    });
-  }
 
   var lockedServices = null;
   var requestType = null;
@@ -63,7 +49,6 @@
     form.reset();
     resetFormView();
     ensureRequestTypeRow();
-    if (photoName) photoName.textContent = "Keine Datei ausgewählt";
 
     lockedServices = servicesAttr
       ? servicesAttr
