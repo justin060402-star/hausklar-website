@@ -593,7 +593,11 @@
     </div>
     <div class="form-row">
       <label for="af-photos">Fotos (optional)</label>
-      <input type="file" id="af-photos" name="attachment" accept="image/*" capture="environment" multiple />
+      <div class="file-upload">
+        <input type="file" id="af-photos" name="attachment" accept="image/*" capture="environment" multiple class="file-upload-input" />
+        <label class="file-upload-btn" for="af-photos">Dateien auswählen</label>
+        <span class="file-upload-name" id="af-photos-name">Keine Datei ausgewählt</span>
+      </div>
       <p class="form-hint">Laden Sie bis zu 5 Fotos hoch oder nehmen Sie direkt ein Foto auf – das hilft uns bei einer genaueren Ersteinschätzung.</p>
     </div>
 
