@@ -527,6 +527,19 @@ section.alt {
   padding: 0 var(--space-lg) var(--space-lg);
   color: var(--anthracite-soft);
 }
+.faq-accordion-item .faq-accordion-list {
+  margin: 0;
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+.faq-accordion-item .faq-accordion-list li {
+  list-style: disc;
+  margin-left: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: var(--anthracite-soft);
+}
+.faq-accordion-item .faq-accordion-list li:last-child {
+  margin-bottom: 0;
+}
 .contact-form-card {
   background: var(--white);
   border-radius: var(--radius-lg);
