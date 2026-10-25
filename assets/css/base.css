@@ -888,46 +888,6 @@ br.mobile-only {
   font-size: 0.85rem;
   cursor: pointer;
 }
-.file-upload {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-}
-.file-upload-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.file-upload-btn {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 0.6rem 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  background: var(--cream);
-  color: var(--anthracite);
-  cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-.file-upload-btn:hover {
-  border-color: var(--forest);
-}
-.file-upload-input:focus-visible + .file-upload-btn {
-  outline: 2px solid var(--forest);
-  outline-offset: 2px;
-}
-.file-upload-name {
-  font-size: 0.82rem;
-  color: var(--anthracite-soft);
-  word-break: break-word;
-}
 .type-toggle {
   display: flex;
   gap: 0.6rem;
