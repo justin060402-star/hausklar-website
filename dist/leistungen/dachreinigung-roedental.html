@@ -269,6 +269,31 @@
         </div>
       </div>
       -->
+      <details class="protect-box-collapsible reveal" open>
+        <summary>
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l7 3v6.2c0 4.8-3.2 8-7 9-3.8-1-7-4.2-7-9V6l7-3z" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+          <div>
+            <span class="tag">Optionale Zusatzleistung</span>
+            <h3>Zusätzlicher Schutz fürs Dach</h3>
+          </div>
+          <span class="protect-box-toggle-icon">Mehr erfahren<svg class="protect-box-toggle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </summary>
+        <p>Direkt nach der Tiefenreinigung ist die Dachziegeloberfläche besonders offenporig – jetzt zahlt sich ein dauerhafter Schutz am meisten aus. Auf Wunsch imprägnieren wir mit einer hochwertigen, zu 100 % chemie- und lösemittelfreien Hydrophobierung auf Wasserbasis, die tief in die Mikroporen eindringt. Eine Versiegelung ist das ausdrücklich nicht – ein verbreiteter Irrglaube: Sie liegt nur als dünne Schicht auf und reißt bei Frost leicht, unsere Imprägnierung dagegen zieht tief ins Material ein. Regenwasser perlt danach ab und nimmt Staub sowie neue Sporen gleich mit (Selbstreinigungseffekt). Wir setzen ausschließlich Profiprodukte aus dem Fachhandel ein: eine preisgünstigere Variante mit 1 bis 2 Jahren Wirkungsdauer sowie unser Premium-Produkt auf Silan-Siloxan-Basis mit 5 bis 8 Jahren Schutzwirkung. So hält das Dach spürbar länger, und der Substanzwert Ihrer Immobilie bleibt erhalten. Nicht im Standardpaket enthalten, sondern separat buchbar.</p>
+      </details>
+      <script>
+        (function () {
+          var mq = window.matchMedia('(min-width: 901px)');
+          function syncProtectBoxOpen() {
+            document.querySelectorAll('.protect-box-collapsible').forEach(function (el) {
+              if (!mq.matches) { el.removeAttribute('open'); }
+              else { el.setAttribute('open', ''); }
+            });
+          }
+          syncProtectBoxOpen();
+          mq.addEventListener('change', syncProtectBoxOpen);
+        })();
+      </script>
+
       <div class="detail-text reveal" style="max-width:70ch;">
         <span class="eyebrow">Worauf geachtet wird</span>
         <h3>Sicher und bodennah gereinigt</h3>
@@ -279,14 +304,6 @@
         </ul>
       </div>
 
-      <div class="protect-box reveal">
-        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l7 3v6.2c0 4.8-3.2 8-7 9-3.8-1-7-4.2-7-9V6l7-3z" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
-        <div>
-          <span class="tag">Optionale Zusatzleistung</span>
-          <h3>Zusätzlicher Schutz fürs Dach</h3>
-          <p>Direkt nach der Tiefenreinigung ist die Dachziegeloberfläche besonders offenporig – jetzt zahlt sich ein dauerhafter Schutz am meisten aus. Auf Wunsch imprägnieren wir mit einer hochwertigen, zu 100 % chemie- und lösemittelfreien Hydrophobierung auf Wasserbasis, die tief in die Mikroporen eindringt. Eine Versiegelung ist das ausdrücklich nicht – ein verbreiteter Irrglaube: Sie liegt nur als dünne Schicht auf und reißt bei Frost leicht, unsere Imprägnierung dagegen zieht tief ins Material ein. Regenwasser perlt danach ab und nimmt Staub sowie neue Sporen gleich mit (Selbstreinigungseffekt). Wir setzen ausschließlich Profiprodukte aus dem Fachhandel ein: eine preisgünstigere Variante mit 1 bis 2 Jahren Wirkungsdauer sowie unser Premium-Produkt auf Silan-Siloxan-Basis mit 5 bis 8 Jahren Schutzwirkung. So hält das Dach spürbar länger, und der Substanzwert Ihrer Immobilie bleibt erhalten. Nicht im Standardpaket enthalten, sondern separat buchbar.</p>
-        </div>
-      </div>
     </div>
   </section>
 
