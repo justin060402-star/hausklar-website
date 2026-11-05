@@ -307,8 +307,13 @@
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
+  .split .split-text,
+  .split.reverse .split-text {
+    order: 1;
+  }
+  .split .split-media,
   .split.reverse .split-media {
-    order: 0;
+    order: 2;
   }
   .split-philosophie .img-placeholder {
     aspect-ratio: 3/4 !important;

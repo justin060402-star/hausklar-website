@@ -236,8 +236,13 @@ section.alt {
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
+  .detail-block .detail-text,
+  .detail-block.reverse .detail-text {
+    order: 1;
+  }
+  .detail-block .detail-media,
   .detail-block.reverse .detail-media {
-    order: 0;
+    order: 2;
   }
   .detail-media .img-placeholder {
     position: static;
