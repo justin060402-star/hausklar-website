@@ -301,6 +301,8 @@ section.alt {
 @media (max-width: 900px) {
   .protect-box-collapsible {
     padding: var(--space-md);
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
   }
   .protect-box-collapsible summary {
     cursor: pointer;
