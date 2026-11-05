@@ -303,24 +303,28 @@ section.alt {
   }
   .protect-box-collapsible summary {
     cursor: pointer;
+    flex-wrap: wrap;
   }
   .protect-box-collapsible .protect-box-toggle-icon {
     display: flex;
-    flex-shrink: 0;
-    width: 26px;
-    height: 26px;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 1.5px solid var(--forest);
+    justify-content: flex-end;
+    gap: 0.35rem;
+    width: 100%;
+    margin-top: 0.5rem;
     color: var(--forest);
-    font-size: 1.2rem;
-    line-height: 1;
-    transition: transform 0.2s ease;
-    margin-left: auto;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
   }
-  .protect-box-collapsible[open] .protect-box-toggle-icon {
-    transform: rotate(45deg);
+  .protect-box-collapsible .protect-box-toggle-arrow {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .protect-box-collapsible[open] .protect-box-toggle-arrow {
+    transform: rotate(180deg);
   }
 }
 @media (min-width: 901px) {
