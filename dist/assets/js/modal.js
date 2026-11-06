@@ -14,13 +14,29 @@
   var errorBox = document.getElementById("formError");
   var successBox = document.getElementById("formSuccess");
   var successCloseBtn = document.getElementById("formSuccessClose");
+  var probeflaecheRow = document.getElementById("probeflaecheRow");
 
   if (!overlay || !box || !form) return;
+
+  var PROBEFLAECHE_SERVICES = ["Solar- & Photovoltaikanlagen", "Terrassen- & Pflasterflächen", "Dächer", "Fassaden"];
 
   var lockedServices = null;
   var requestType = null;
   var requestTypeRow = document.getElementById("requestTypeRow");
   var requestTypeLabel = document.getElementById("requestTypeLabel");
+
+  function updateProbeflaecheVisibility(services) {
+    if (!probeflaecheRow) return;
+    var relevant = (services || []).some(function (s) {
+      return PROBEFLAECHE_SERVICES.indexOf(s) !== -1;
+    });
+    probeflaecheRow.hidden = !relevant;
+    if (!relevant) {
+      form.querySelectorAll('input[name="probeflaeche"]').forEach(function (r) {
+        r.checked = false;
+      });
+    }
+  }
 
   function ensureRequestTypeRow() {
     if (requestTypeRow || !lockedRow) return;
@@ -66,6 +82,7 @@
       form.querySelectorAll('input[name="leistung"]').forEach(function (cb) {
         cb.checked = lockedServices.indexOf(cb.value) !== -1;
       });
+      updateProbeflaecheVisibility(lockedServices);
 
       if (requestType) {
         modalTitle.textContent = requestType + " – " + label;
@@ -82,6 +99,7 @@
       form.querySelectorAll('input[name="leistung"]').forEach(function (cb) {
         cb.checked = false;
       });
+      updateProbeflaecheVisibility([]);
     }
 
     if (requestTypeRow) {
@@ -117,6 +135,15 @@
       e.preventDefault();
       openModal(trigger.getAttribute("data-services"), trigger.getAttribute("data-request-type"));
     });
+  });
+
+  form.addEventListener("change", function (e) {
+    if (e.target && e.target.name === "leistung" && !gridRow.hidden) {
+      var checked = Array.from(form.querySelectorAll('input[name="leistung"]:checked')).map(function (cb) {
+        return cb.value;
+      });
+      updateProbeflaecheVisibility(checked);
+    }
   });
 
   overlay.addEventListener("click", closeModal);
