@@ -254,7 +254,8 @@ section.alt {
     order: 2;
   }
   .detail-media .img-placeholder {
-    position: static;
+    position: relative;
+    top: auto;
   }
 }
 
