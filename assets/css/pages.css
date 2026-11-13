@@ -206,6 +206,12 @@ section.alt {
   padding-top: var(--space-xl);
   border-top: 1px solid var(--line);
 }
+.topic-block + .detail-block,
+.detail-block + .topic-block {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--line);
+}
 .detail-text ul {
   margin-top: var(--space-sm);
   display: flex;
