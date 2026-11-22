@@ -15,6 +15,7 @@
   var successBox = document.getElementById("formSuccess");
   var successCloseBtn = document.getElementById("formSuccessClose");
   var probeflaecheRow = document.getElementById("probeflaecheRow");
+  var lockedChangeBtn = document.getElementById("serviceLockedChange");
 
   if (!overlay || !box || !form) return;
 
@@ -130,10 +131,31 @@
     document.body.style.overflow = "";
   }
 
+  function unlockServiceSelection() {
+    lockedServices = null;
+    lockedRow.hidden = true;
+    gridRow.hidden = false;
+    modalTitle.textContent = "Teilen Sie uns hier mit welche Flächen wir für Sie Reinigen sollen!";
+    modalSub.textContent = "Wählen Sie Ihre gewünschte Leistung aus und wir melden uns noch am selben Tag mit einer unverbindlichen kostenlosen Ersteinschätzung bei Ihnen.";
+    var checked = Array.from(form.querySelectorAll('input[name="leistung"]:checked')).map(function (cb) {
+      return cb.value;
+    });
+    updateProbeflaecheVisibility(checked);
+  }
+
   document.querySelectorAll(".js-open-anfrage").forEach(function (trigger) {
     trigger.addEventListener("click", function (e) {
       e.preventDefault();
-      openModal(trigger.getAttribute("data-services"), trigger.getAttribute("data-request-type"));
+      var services = trigger.getAttribute("data-services");
+      var requestType = trigger.getAttribute("data-request-type");
+      if (!services) {
+        var pageTrigger = document.querySelector(".js-open-anfrage[data-services]");
+        if (pageTrigger) {
+          services = pageTrigger.getAttribute("data-services");
+          requestType = requestType || pageTrigger.getAttribute("data-request-type");
+        }
+      }
+      openModal(services, requestType);
     });
   });
 
@@ -148,6 +170,9 @@
 
   overlay.addEventListener("click", closeModal);
   closeBtn.addEventListener("click", closeModal);
+  if (lockedChangeBtn) {
+    lockedChangeBtn.addEventListener("click", unlockServiceSelection);
+  }
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closeModal();
   });

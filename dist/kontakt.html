@@ -433,11 +433,14 @@
 
     <div class="form-row" id="serviceLockedRow" hidden>
       <label>Ausgewählte Leistung</label>
-      <div class="service-locked" id="serviceLockedLabel"></div>
+      <div class="service-locked-wrap">
+        <div class="service-locked" id="serviceLockedLabel"></div>
+        <button type="button" class="service-locked-change" id="serviceLockedChange">Andere Leistung wählen</button>
+      </div>
     </div>
 
     <div class="form-row" id="serviceGridRow">
-      <label>Leistung(en) auswählen</label>
+      <label>Leistung(en) auswählen – optional</label>
       <div class="service-grid">
         <label class="service-chip">
           <input type="checkbox" name="leistung" value="Terrassen- & Pflasterflächen" />
