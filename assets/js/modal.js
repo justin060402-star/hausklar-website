@@ -32,6 +32,27 @@
 
   var PROBEFLAECHE_SERVICES = ["Solar- & Photovoltaikanlagen", "Terrassen- & Pflasterflächen", "Dächer", "Fassaden"];
 
+  var SERVICE_LABELS = {
+    "Terrassen- & Pflasterflächen": "Terrassen- & Pflasterreinigung",
+    "Solar- & Photovoltaikanlagen": "Solar- & PV-Reinigung",
+    "Fenster & Glasflächen": "Fenster- & Glasreinigung",
+    "Wintergärten": "Wintergartenreinigung",
+    "Terrassenüberdachungen": "Terrassenüberdachungsreinigung",
+    "Fassaden": "Fassadenreinigung",
+    "Dächer": "Dachreinigung",
+    "Mauern & Treppen": "Mauer- & Treppenreinigung",
+    "Dachrinnen": "Dachrinnenreinigung",
+    "Spezialleistungen": "Spezialreinigung",
+    "Garagentore & Carports": "Garagentor- & Carportreinigung",
+    "Gewerbe- & Großobjekte": "Gewerbe- & Großobjektreinigung",
+    "Graffiti-Entfernung": "Graffiti-Entfernung",
+    "Ich bin mir noch nicht sicher": "Noch nicht sicher"
+  };
+
+  function serviceLabel(value) {
+    return SERVICE_LABELS[value] || value;
+  }
+
   var lockedServices = null;
   var requestType = null;
   var requestTypeRow = document.getElementById("requestTypeRow");
@@ -87,7 +108,7 @@
     requestType = requestTypeAttr ? requestTypeAttr.trim() : null;
 
     if (lockedServices && lockedServices.length) {
-      var label = lockedServices.join(" & ");
+      var label = lockedServices.map(serviceLabel).join(" & ");
       lockedRow.hidden = false;
       lockedLabel.textContent = label;
       gridRow.hidden = true;
@@ -202,12 +223,13 @@
 
     if (!name || !email) return;
 
-    var services =
+    var services = (
       lockedServices && lockedServices.length
         ? lockedServices
         : Array.from(form.querySelectorAll('input[name="leistung"]:checked')).map(function (cb) {
             return cb.value;
-          });
+          })
+    ).map(serviceLabel);
 
     if (errorBox) errorBox.hidden = true;
     if (submitBtn) {
