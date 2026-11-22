@@ -887,6 +887,30 @@ br.mobile-only {
   outline: 2px solid var(--forest);
   outline-offset: 2px;
 }
+.service-grid-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--forest);
+  cursor: pointer;
+}
+.service-grid-toggle:hover {
+  text-decoration: underline;
+}
+.service-grid-toggle-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+.service-grid-toggle.is-expanded .service-grid-toggle-icon {
+  transform: rotate(180deg);
+}
 @media (max-width: 560px) {
   .service-grid {
     grid-template-columns: 1fr;
@@ -993,17 +1017,6 @@ br.mobile-only {
 .form-status-success p {
   max-width: 42ch;
   margin: 0 auto var(--space-md);
-}
-
-.form-consent-note {
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: var(--anthracite-soft);
-  margin: 0 0 var(--space-sm);
-}
-.form-consent-note a {
-  color: var(--forest);
-  text-decoration: underline;
 }
 
 /* ===== Bild-Platzhalter ===== */

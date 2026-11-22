@@ -541,27 +541,27 @@
           <span class="service-chip-label">Fassadenreinigung</span>
           <span class="service-chip-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </label>
-        <label class="service-chip">
+        <label class="service-chip service-chip-extra" hidden>
           <input type="checkbox" name="leistung" value="Dächer" />
           <span class="service-chip-label">Dachreinigung</span>
           <span class="service-chip-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </label>
-        <label class="service-chip">
+        <label class="service-chip service-chip-extra" hidden>
           <input type="checkbox" name="leistung" value="Mauern & Treppen" />
           <span class="service-chip-label">Mauer- & Treppenreinigung</span>
           <span class="service-chip-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </label>
-        <label class="service-chip">
+        <label class="service-chip service-chip-extra" hidden>
           <input type="checkbox" name="leistung" value="Dachrinnen" />
           <span class="service-chip-label">Dachrinnenreinigung</span>
           <span class="service-chip-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </label>
-        <label class="service-chip">
+        <label class="service-chip service-chip-extra" hidden>
           <input type="checkbox" name="leistung" value="Spezialleistungen" />
           <span class="service-chip-label">Spezialreinigung</span>
           <span class="service-chip-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </label>
-        <label class="service-chip">
+        <label class="service-chip service-chip-extra" hidden>
           <input type="checkbox" name="leistung" value="Garagentore & Carports" />
           <span class="service-chip-label">Garagentor- & Carportreinigung</span>
           <span class="service-chip-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -576,12 +576,16 @@
           <span class="service-chip-label">Graffiti-Entfernung</span>
           <span class="service-chip-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </label>
-        <label class="service-chip">
+        <label class="service-chip service-chip-extra" hidden>
           <input type="checkbox" name="leistung" value="Ich bin mir noch nicht sicher" />
           <span class="service-chip-label">Noch nicht sicher</span>
           <span class="service-chip-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4.5 12.5l5 5L19.5 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </label>
       </div>
+      <button type="button" class="service-grid-toggle" id="serviceGridToggle">
+        <span>Mehr Leistungen anzeigen</span>
+        <svg class="service-grid-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
 
     <div class="form-row">
@@ -621,7 +625,6 @@
 
     <p class="form-required-hint">* Pflichtfelder</p>
 
-    <p class="form-consent-note">Mit dem Absenden stimmen Sie unserer <a href="../datenschutz">Datenschutzerklärung</a> zu.</p>
 
     <div class="form-status form-status-error" id="formError" hidden>
       Leider gab es ein Problem beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an
