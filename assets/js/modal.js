@@ -53,6 +53,68 @@
     return SERVICE_LABELS[value] || value;
   }
 
+  var SERVICE_META = {
+    "Terrassen- & Pflasterflächen": {
+      title: "Jetzt die Reinigung Ihrer Terrassen- & Pflasterflächen anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihrer Terrassen- & Pflasterflächen."
+    },
+    "Solar- & Photovoltaikanlagen": {
+      title: "Jetzt die Reinigung Ihrer Solar- & Photovoltaikanlage anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihrer Solar- & Photovoltaikanlage."
+    },
+    "Fenster & Glasflächen": {
+      title: "Jetzt die Reinigung Ihrer Fenster & Glasflächen anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihrer Fenster & Glasflächen."
+    },
+    "Wintergärten": {
+      title: "Jetzt die Reinigung Ihres Wintergartens anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihres Wintergartens."
+    },
+    "Terrassenüberdachungen": {
+      title: "Jetzt die Reinigung Ihrer Terrassenüberdachung anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihrer Terrassenüberdachung."
+    },
+    "Fassaden": {
+      title: "Jetzt die Reinigung Ihrer Fassade anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihrer Fassade."
+    },
+    "Dächer": {
+      title: "Jetzt die Reinigung Ihres Daches anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihres Daches."
+    },
+    "Mauern & Treppen": {
+      title: "Jetzt die Reinigung Ihrer Mauern & Treppen anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihrer Mauern & Treppen."
+    },
+    "Dachrinnen": {
+      title: "Jetzt die Reinigung Ihrer Dachrinne anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihrer Dachrinne."
+    },
+    "Spezialleistungen": {
+      title: "Jetzt Ihre Spezialreinigung anfragen",
+      sub: "Ihre Anfrage bezieht sich auf Ihre Spezialreinigung."
+    },
+    "Garagentore & Carports": {
+      title: "Jetzt die Reinigung Ihres Garagentors & Carports anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihres Garagentors & Carports."
+    },
+    "Gewerbe- & Großobjekte": {
+      title: "Jetzt Ihre Gewerbe- & Großobjektreinigung anfragen",
+      sub: "Ihre Anfrage bezieht sich auf Ihre Gewerbe- & Großobjektreinigung."
+    },
+    "Graffiti-Entfernung": {
+      title: "Jetzt die Entfernung Ihres Graffitis anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Entfernung Ihres Graffitis."
+    }
+  };
+
+  var SERVICE_COMBO_META = {
+    "Terrassenüberdachungen,Wintergärten": {
+      title: "Jetzt die Reinigung Ihrer Terrassenüberdachung & Ihres Wintergartens anfragen",
+      sub: "Ihre Anfrage bezieht sich auf die Reinigung Ihrer Terrassenüberdachung & Ihres Wintergartens."
+    }
+  };
+
   var lockedServices = null;
   var requestType = null;
   var requestTypeRow = document.getElementById("requestTypeRow");
@@ -121,8 +183,15 @@
         modalTitle.textContent = requestType + " – " + label;
         modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + requestType + " (" + label + "). Wir melden uns noch am selben Tag bei Ihnen.";
       } else {
-        modalTitle.textContent = "Jetzt " + label + " anfragen";
-        modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + label + ". Wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
+        var comboKey = lockedServices.join(",");
+        var meta = lockedServices.length === 1 ? SERVICE_META[lockedServices[0]] : SERVICE_COMBO_META[comboKey];
+        if (meta) {
+          modalTitle.textContent = meta.title;
+          modalSub.textContent = meta.sub + " Wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
+        } else {
+          modalTitle.textContent = "Jetzt " + label + " anfragen";
+          modalSub.textContent = "Ihre Anfrage bezieht sich auf: " + label + ". Wir melden uns noch am selben Tag mit einer unverbindlichen Einschätzung.";
+        }
       }
     } else {
       modalTitle.textContent = "Teilen Sie uns hier mit welche Flächen wir für Sie Reinigen sollen!";
