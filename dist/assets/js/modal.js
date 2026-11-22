@@ -16,6 +16,17 @@
   var successCloseBtn = document.getElementById("formSuccessClose");
   var probeflaecheRow = document.getElementById("probeflaecheRow");
   var lockedChangeBtn = document.getElementById("serviceLockedChange");
+  var gridToggleBtn = document.getElementById("serviceGridToggle");
+
+  function setGridExpanded(expanded) {
+    if (!gridToggleBtn) return;
+    form.querySelectorAll(".service-chip-extra").forEach(function (chip) {
+      chip.hidden = !expanded;
+    });
+    gridToggleBtn.classList.toggle("is-expanded", expanded);
+    var label = gridToggleBtn.querySelector("span");
+    if (label) label.textContent = expanded ? "Weniger anzeigen" : "Mehr Leistungen anzeigen";
+  }
 
   if (!overlay || !box || !form) return;
 
@@ -97,6 +108,7 @@
       modalSub.textContent = "Wählen Sie Ihre gewünschte Leistung aus und wir melden uns noch am selben Tag mit einer unverbindlichen kostenlosen Ersteinschätzung bei Ihnen.";
       lockedRow.hidden = true;
       gridRow.hidden = false;
+      setGridExpanded(false);
       form.querySelectorAll('input[name="leistung"]').forEach(function (cb) {
         cb.checked = false;
       });
@@ -135,6 +147,7 @@
     lockedServices = null;
     lockedRow.hidden = true;
     gridRow.hidden = false;
+    setGridExpanded(true);
     modalTitle.textContent = "Teilen Sie uns hier mit welche Flächen wir für Sie Reinigen sollen!";
     modalSub.textContent = "Wählen Sie Ihre gewünschte Leistung aus und wir melden uns noch am selben Tag mit einer unverbindlichen kostenlosen Ersteinschätzung bei Ihnen.";
     var checked = Array.from(form.querySelectorAll('input[name="leistung"]:checked')).map(function (cb) {
@@ -172,6 +185,11 @@
   closeBtn.addEventListener("click", closeModal);
   if (lockedChangeBtn) {
     lockedChangeBtn.addEventListener("click", unlockServiceSelection);
+  }
+  if (gridToggleBtn) {
+    gridToggleBtn.addEventListener("click", function () {
+      setGridExpanded(!gridToggleBtn.classList.contains("is-expanded"));
+    });
   }
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closeModal();
